@@ -656,39 +656,69 @@ footer.sticky-bottom {
 // Projects
 
 .projects {
-  a {
-    text-decoration: none;
+  margin-top: 2rem;
 
-    &:hover {
-      .card-title {
-        color: var(--global-theme-color);
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  ol.bibliography {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+
+    li {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .title {
+        font-weight: bolder;
+        font-size: 1.3em;
+        margin-bottom: 0.75rem;
+      }
+
+      .author {
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+      }
+
+      .periodical {
+        font-size: 0.9em;
+        margin-bottom: 0.75rem;
+        color: var(--global-text-color-light);
+      }
+
+      .links {
+        .btn {
+          margin-right: 0.5rem;
+          margin-bottom: 0.25rem;
+          border: 1px solid var(--global-theme-color);
+          color: var(--global-theme-color);
+
+          &:hover {
+            background-color: var(--global-theme-color);
+            color: white;
+          }
+        }
       }
     }
-  }
-
-  .card {
-    img {
-      width: 100%;
-    }
-  }
-
-  .col {
-    padding-bottom: 1rem;
-  }
-
-  .grid-sizer,
-  .grid-item {
-    width: 250px;
-    margin-bottom: 10px;
-  }
-
-  h2.category {
-    color: var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    text-align: right;
   }
 }
 
@@ -867,6 +897,69 @@ footer.sticky-bottom {
     }
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
+    }
+  }
+}
+
+// Teaching (add this section after the Publications section)
+
+.teaching {
+  margin-top: 2rem;
+
+  h1 {
+    color: var(--global-theme-color);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  h2.bibliography {
+    color: var(--global-divider-color);
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1rem;
+    margin-top: 2rem;
+    text-align: right;
+  }
+
+  ol.bibliography {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+
+    li {
+      margin-bottom: 2rem;  /* More spacing between entries */
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--global-divider-color);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .title {
+        font-weight: bolder;
+        font-size: 1.3em;  /* Bigger font for title */
+        margin-bottom: 0.75rem;
+      }
+
+      .author {
+        margin-bottom: 0.75rem;
+        line-height: 1.5;
+      }
+
+      .periodical {
+        font-size: 0.9em;
+        margin-bottom: 0.5rem;
+        color: var(--global-text-color-light);
+      }
     }
   }
 }

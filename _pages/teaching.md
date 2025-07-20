@@ -1,12 +1,14 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+title: Teaching
+description: I have worked as both a teaching assistant and course instructor and mentored, and I have had fun every bit of it!
 nav: true
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+<div class="teaching">
 
-Organize your courses by years, topics, or universities, however you like!
+{% bibliography --file teaching --template teaching_bib --group_by none --sort_by year --order descending %}
+
+</div>
