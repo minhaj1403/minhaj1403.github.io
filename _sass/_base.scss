@@ -199,10 +199,12 @@ ul.task-list input[type="checkbox"] {
     margin-bottom: 5px;
     margin-top: 5px;
     font-family: monospace;
+    text-align: center; /* Center-align the email */
 
     p {
       display: inline-block;
       margin: 0;
+      font-size: 0.85rem; /* Smaller email font */
     }
   }
 }
@@ -438,6 +440,51 @@ ul.task-list input[type="checkbox"] {
 
   .contact-note {
     font-size: 0.8rem;
+  }
+}
+
+// Compact social icons for profile section
+.social-compact {
+  text-align: center; /* Center-align social icons */
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem; /* More space before news section */
+
+  .contact-icons {
+    font-size: 1.8rem; /* Smaller than the default 4rem */
+
+    a {
+      margin-right: 0.75rem; /* Space between icons */
+
+      img {
+        width: 1.5rem;  /* Smaller than default 3.2rem */
+        height: 1.5rem;
+        margin-bottom: 0.25rem; /* Less margin */
+      }
+
+      svg {
+        width: 1.8rem;    /* Smaller than default 3.5rem */
+        height: 1.8rem;
+        margin-bottom: 0.25rem;
+
+        image {
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+      }
+
+      i::before {
+        color: var(--global-text-color);
+        transition-property: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
   }
 }
 

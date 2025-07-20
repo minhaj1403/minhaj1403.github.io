@@ -12,7 +12,7 @@ profile:
     <p>minhaj (at) kaist (dot) ac (dot) kr</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
-social: false # includes social icons at the bottom of the page
+social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
@@ -24,7 +24,7 @@ latest_posts:
   scrollable: # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-Hi! I'm **Minhaj**, an undergraduate at [KAIST](https://www.kaist.ac.kr/en/), majoring in Computer Science. I am also minoring in Business & Technology Management. I hail from Bangladesh, and I am living in South Korea.
+Hi! I'm **Minhaj**, an undergraduate at [KAIST](https://www.kaist.ac.kr/en/), majoring in Computer Science. I am also minoring in Business & Technology Management. I hail from **Bangladesh**, and I am living in **South Korea**.
 
 I currently work on VLM reasoning capabilities at the [Machine Learning & Vision Lab (MLV)](http://mlv.kaist.ac.kr), advised by [Prof. Hyunwoo J. Kim](https://www.hyunwoojkim.com/people). Previously, I researched low-resource language processing in LLMs at the [U&I Lab](https://uilab.kr) with [Prof. Alice Oh](https://aliceoh9.github.io).
 
