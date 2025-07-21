@@ -518,6 +518,12 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+/* Fix white text on white background in the News section */
+.news,
+.news * {
+  color: var(--global-text-color) !important;
+}
+
 // Footer
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
