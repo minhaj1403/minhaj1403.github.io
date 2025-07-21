@@ -26,7 +26,7 @@ latest_posts:
 ---
 Hi! I'm **Minhaj**, an undergraduate at [KAIST](https://www.kaist.ac.kr/en/), majoring in Computer Science. I am also minoring in Business & Technology Management. I hail from **Bangladesh**, and currently study in **South Korea**.
 
-I currently work on VLM reasoning capabilities at the [Machine Learning & Vision Lab (MLV)](http://mlv.kaist.ac.kr), advised by [Prof. Hyunwoo J. Kim](https://www.hyunwoojkim.com/people). Previously, I researched low-resource language processing in LLMs at the [U&I Lab](https://uilab.kr) with [Prof. Alice Oh](https://aliceoh9.github.io).
+I currently work on VLM reasoning capabilities at the [Machine Learning & Vision Lab (MLV)](http://mlv.kaist.ac.kr), advised by [Prof. Hyunwoo J. Kim](https://www.hyunwoojkim.com/people). Previously, I researched low-resource language processing in LLMs at the [U&I Lab](https://uilab.kr) under [Prof. Alice Oh](https://aliceoh9.github.io).
 
 My research lies at the intersection of NLP and Computer Vision, where I explore ways to enhance the capabilities of LLMs and MLLMs. I believe that achieving AGI requires systems that are multilingual, multicultural, and multimodal, which would be capable of understanding and reasoning across all means and demographies.
 

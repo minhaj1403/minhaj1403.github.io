@@ -32,6 +32,16 @@
       {{ entry.description }}
     </div>
 
+    <!-- Keywords/Hashtags -->
+    {% if entry.keywords %}
+      <div class="keywords">
+        {% assign keywords_array = entry.keywords | split: ", " %}
+        {% for keyword in keywords_array %}
+          <span class="keyword-tag">#{{ keyword | strip }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+
     <!-- Duration -->
     <div class="periodical">
       {{ entry.duration }}
