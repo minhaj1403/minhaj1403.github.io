@@ -2,7 +2,7 @@
 layout: about
 title: About Me!
 permalink: /
-subtitle: Undergraduate Student, <a href='https://www.kaist.ac.kr/en/)'>KAIST</a>, Daejeon, Republic of Korea
+subtitle: Undergraduate Student, <a href='https://www.kaist.ac.kr/en/'>KAIST</a>, Daejeon, Republic of Korea
 
 profile:
   align: left
