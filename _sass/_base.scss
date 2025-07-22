@@ -770,6 +770,7 @@ footer.sticky-bottom {
           margin-bottom: 0.25rem;
           border: 1px solid var(--global-theme-color);
           color: var(--global-theme-color);
+          transition: all 0.2s ease-in-out;
 
           &:hover {
             background-color: var(--global-theme-color);
