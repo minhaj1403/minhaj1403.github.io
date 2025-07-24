@@ -765,16 +765,27 @@ footer.sticky-bottom {
       }
 
       .links {
-        .btn {
+        a.btn {
           margin-right: 0.5rem;
           margin-bottom: 0.25rem;
-          border: 1px solid var(--global-theme-color);
-          color: var(--global-theme-color);
-          transition: all 0.2s ease-in-out;
+          border: 1px solid var(--global-theme-color) !important;
+          color: var(--global-theme-color) !important;
+          background-color: transparent !important;
+          transition: all 0.2s ease-in-out !important;
+          text-decoration: none !important;
 
           &:hover {
-            background-color: var(--global-theme-color);
-            color: white;
+            background-color: var(--global-theme-color) !important;
+            color: white !important;
+            border-color: var(--global-theme-color) !important;
+          }
+
+          &:focus,
+          &:active {
+            background-color: var(--global-theme-color) !important;
+            color: white !important;
+            border-color: var(--global-theme-color) !important;
+            box-shadow: none !important;
           }
         }
       }
@@ -793,6 +804,7 @@ footer.sticky-bottom {
           margin-bottom: 0.25rem;
           font-size: 0.8rem;
           font-weight: 500;
+          transition: all 0.2s ease-in-out;
           
           &:hover {
             background-color: var(--global-theme-color);
