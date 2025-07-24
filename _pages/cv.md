@@ -1,8 +1,7 @@
 ---
 layout: redirect
 permalink: /cv/
-redirect_to: https://kaistackr-my.sharepoint.com/:b:/g/personal/minhaj_kaist_ac_kr/EQ2aLzXvVp1IgFmUpMJqfBcBLGVrbhgCigX7oxtBe4QQNg?e=Fs1cd1
-title: CV
+redirect_to: https://kaistackr-my.sharepoint.com/:b:/g/personal/minhaj_kaist_ac_kr/EXuLXlvF0sZAkfmD4DJCJxoBM5jzsyrHIqb_r07gEmVlnw?e=SIvSIB
 nav: true
 nav_order: 5
 ---
