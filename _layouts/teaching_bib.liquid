@@ -18,13 +18,7 @@
     </div>
 
     <!-- Course Details: Role, Institution, Duration -->
-    {% capture course_details %}
-      {% if entry.role %}{{ entry.role }}{% endif %}
-      {% if entry.role and entry.institution %}, {% endif %}
-      {% if entry.institution %}<em>{{ entry.institution }}</em>{% endif %}
-      {% if entry.duration and (entry.role or entry.institution) %}, {% endif %}
-      {% if entry.duration %}{{ entry.duration }}{% endif %}
-    {% endcapture %}
+    {% capture course_details %}{% if entry.role %}{{ entry.role }}{% endif %}{% if entry.role and entry.institution %}, {% endif %}{% if entry.institution %}<em>{{ entry.institution }}</em>{% endif %}{% if entry.duration and (entry.role or entry.institution) %}, {% endif %}{% if entry.duration %}{{ entry.duration }}{% endif %}{% endcapture %}
     
     <div class="periodical">
       {{ course_details | strip }}
