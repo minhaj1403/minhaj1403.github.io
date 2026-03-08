@@ -2,14 +2,15 @@
 layout: about
 title: About Me!
 permalink: /
-subtitle: Undergraduate Student, <a href='https://www.kaist.ac.kr/en/'>KAIST</a>, Daejeon, Republic of Korea
+# subtitle: Undergraduate Student, <a href='https://www.kaist.ac.kr/en/'>KAIST</a>, Daejeon, Republic of Korea
+subtitle: Computer Science Graduate, <a href='https://www.kaist.ac.kr/en/'>KAIST</a>
 
 profile:
   align: left
   image: minhaj.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>minhaj (at) kaist (dot) ac (dot) kr</p>
+    <p>minhajurrahman1403 (at) gmail (d0t) com</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -24,11 +25,11 @@ latest_posts:
   scrollable: # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-Hi! I'm **Minhaj**, an undergraduate at [KAIST](https://www.kaist.ac.kr/en/), majoring in Computer Science. I am also minoring in Business & Technology Management. I hail from **Bangladesh**, and currently study in **South Korea**.
+Hi! I'm **Minhaj**, a Computer Science graduate from [KAIST](https://www.kaist.ac.kr/en/), majoring in Computer Science. I am also minoring in Business & Technology Management. I hail from **Bangladesh**, and currently study in **South Korea**.
 
-I currently work on VLM reasoning capabilities at the [Machine Learning & Vision Lab (MLV)](http://mlv.kaist.ac.kr), advised by [Prof. Hyunwoo J. Kim](https://www.hyunwoojkim.com/people). Previously, I researched low-resource language processing in LLMs at the [U&I Lab](https://uilab.kr) under [Prof. Alice Oh](https://aliceoh9.github.io).
+I worked on VLM reasoning capabilities at the [Machine Learning & Vision Lab (MLV)](http://mlv.kaist.ac.kr), advised by [Prof. Hyunwoo J. Kim](https://www.hyunwoojkim.com/people). Previously, I researched low-resource language processing in LLMs at the [U&I Lab](https://uilab.kr) under [Prof. Alice Oh](https://aliceoh9.github.io).
 
-My research lies at the intersection of NLP and Computer Vision, where I explore ways to enhance the capabilities of LLMs and MLLMs. I believe that achieving AGI requires systems that are multilingual, multicultural, and multimodal, which would be capable of understanding and reasoning across all means and demographies.
+My research interest lies at the intersection of NLP and Computer Vision, where I explore ways to enhance the capabilities of LLMs and MLLMs. I believe that achieving AGI requires systems that are multilingual, multicultural, and multimodal, which would be capable of understanding and reasoning across all means and demographies.
 
 
 I also interned at UNIUNI Corp., contributing to AI development and communications, achieving a **CES 2025 Innovation Award** for our anomaly detection system in privacy-sensitive places.
