@@ -421,7 +421,7 @@ ninja.data = [{
           title: 'Awarded 4 Million KRW Scholarship from Daewoong Foundation!',
           description: "",
           section: "News",},{id: "news-received-kaist-college-of-engineering-leadership-award",
-          title: 'Received KAIST College of Engineering Leadership Award',
+          title: 'Received KAIST College of Engineering Leadership Award!',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
