@@ -49,10 +49,13 @@
 
     <!-- Links with blue bordered buttons -->
     <div class="links">
-      {% if entry.code %}
+      {% if entry.website != blank %}
+        <a href="{{ entry.website }}" class="btn btn-sm btn-outline-primary z-depth-0" role="button" target="_blank">Website &rarr;</a>
+      {% endif %}
+      {% if entry.code != blank %}
         <a href="{{ entry.code }}" class="btn btn-sm btn-outline-primary z-depth-0" role="button" target="_blank">Code</a>
       {% endif %}
-      {% if entry.report %}
+      {% if entry.report != blank %}
         <a href="{{ entry.report }}" class="btn btn-sm btn-outline-primary z-depth-0" role="button" target="_blank">Report</a>
       {% endif %}
     </div>
