@@ -22,10 +22,20 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap">
 <link rel="stylesheet" href="assets/css/styles.css">
+
+<noscript><style>
+  /* without JS nothing can reveal itself, so show everything outright */
+  [data-reveal], .ticks li, .steps li,
+  .ide-side, .ide-editor, .ide-term { opacity: 1 !important; transform: none !important; }
+  .ide-editor .ln { width: 60% !important; }
+  .progress { display: none; }
+</style></noscript>
 </head>
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
 
 <header class="nav">
   <div class="wrap nav-in">
@@ -48,24 +58,24 @@
   <div class="glow" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <p class="eyebrow"><span class="dot"></span> Personal project · in development</p>
-      <h1>A coding environment<br>for <span class="accent">Android</span>.</h1>
-      <p class="lede">
+      <p class="eyebrow" data-reveal style="--i:0"><span class="dot"></span> Personal project · in development</p>
+      <h1 data-reveal style="--i:1">A coding environment<br>for <span class="accent">Android</span>.</h1>
+      <p class="lede" data-reveal style="--i:2">
         Terminals, files, Git, GitHub pull requests and Claude Code — running on the phone
         itself, or on your own computers over SSH.
       </p>
-      <p class="sub">
+      <p class="sub" data-reveal style="--i:3">
         Laid out for one thumb. Tabs at the bottom, what's open in each tab in a strip above
         them, and the machine you're on as a chip at the top.
       </p>
-      <div class="cta">
+      <div class="cta" data-reveal style="--i:4">
         <a class="btn btn-primary" href="#features">See what it does</a>
         <a class="btn" href="#start">Build it</a>
       </div>
     </div>
 
-    <div class="hero-shot">
-      <div class="phone">
+    <div class="hero-shot" data-reveal style="--i:3">
+      <div class="phone float" id="heroPhone">
         <img src="assets/img/terminal.webp" alt="The Dex terminal on a phone, showing the welcome message and the bottom tab bar." width="1080" height="2340" loading="eager">
       </div>
     </div>
@@ -75,12 +85,12 @@
 <!-- ───────────────────────── showcase ───────────────────────── -->
 <section class="showcase" id="features">
   <div class="wrap">
-    <div class="show-head">
+    <div class="show-head" data-reveal>
       <h2 class="section-title sm">Four tabs, one thumb</h2>
       <p class="show-sub">Everything sits behind the bar at the bottom, where your thumb already is.</p>
     </div>
 
-    <div class="show-grid">
+    <div class="show-grid" data-reveal style="--i:1">
       <div class="phone phone-lg">
         <div class="screen">
           <div class="track" id="track">
@@ -141,7 +151,7 @@
     </div>
 
     <!-- the app's own bottom bar, as the control -->
-    <div class="tabbar" role="tablist" aria-label="Feature tabs">
+    <div class="tabbar" data-reveal style="--i:2" role="tablist" aria-label="Feature tabs">
       <button class="tab is-on" role="tab" aria-selected="true" data-tab="terminal">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l6 6-6 6"/><path d="M13 18h7"/></svg>
         <span>Terminal</span>
@@ -170,7 +180,7 @@
 <section class="machines" id="machines">
   <div class="wrap">
     <div class="split">
-      <div>
+      <div data-reveal>
         <h2 class="section-title">Your machines, from your pocket</h2>
         <p class="section-lede">
           The hosts in your <code>~/.ssh/config</code> open as workspaces. The phone and any
@@ -185,17 +195,17 @@
         </ul>
       </div>
 
-      <figure class="wires" aria-label="One phone connected to several machines over SSH.">
+      <figure class="wires" data-reveal style="--i:1" aria-label="One phone connected to several machines over SSH.">
         <div class="wire-node wire-phone">
           <span class="wire-ic">▣</span>
           <b>This phone</b>
           <small>local Linux prefix</small>
         </div>
-        <div class="wire-rail" aria-hidden="true"></div>
+        <div class="wire-rail" aria-hidden="true"><i class="spark"></i></div>
         <div class="wire-hosts">
-          <div class="wire-node"><span class="wire-ic">⬡</span><b>workstation</b><small>one SSH connection</small></div>
-          <div class="wire-node"><span class="wire-ic">⬡</span><b>gpu-box</b><small>one SSH connection</small></div>
-          <div class="wire-node"><span class="wire-ic">⬡</span><b>server</b><small>one SSH connection</small></div>
+          <div class="wire-node" style="--h:0"><span class="wire-ic">⬡</span><b>workstation</b><small>one SSH connection</small></div>
+          <div class="wire-node" style="--h:1"><span class="wire-ic">⬡</span><b>gpu-box</b><small>one SSH connection</small></div>
+          <div class="wire-node" style="--h:2"><span class="wire-ic">⬡</span><b>server</b><small>one SSH connection</small></div>
         </div>
         <figcaption>Files, Git, pull requests and Claude all run on whichever machine the workspace is on.</figcaption>
       </figure>
@@ -206,7 +216,7 @@
 <!-- ───────────────────────── wide screens ───────────────────────── -->
 <section class="wide">
   <div class="wrap">
-    <div class="band">
+    <div class="band" data-reveal>
       <div>
         <h2 class="section-title sm">Not only phones</h2>
         <p class="section-lede">
@@ -218,8 +228,10 @@
         <div class="ide">
           <div class="ide-side"></div>
           <div class="ide-main">
-            <div class="ide-editor"></div>
-            <div class="ide-term"></div>
+            <div class="ide-editor">
+              <i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i>
+            </div>
+            <div class="ide-term"><i class="caret"></i></div>
           </div>
         </div>
       </div>
@@ -230,9 +242,9 @@
 <!-- ───────────────────────── get started ───────────────────────── -->
 <section class="start" id="start">
   <div class="wrap">
-    <h2 class="section-title">Getting started</h2>
+    <h2 class="section-title" data-reveal>Getting started</h2>
 
-    <ol class="steps">
+    <ol class="steps" data-reveal style="--i:1">
       <li>
         <h3>Install the APK</h3>
         <p>Dex needs Android 7 or later on a 64-bit ARM phone. The app id is <code>com.dex</code>, so it installs next to Termux rather than replacing it.</p>
@@ -247,7 +259,7 @@
       </li>
     </ol>
 
-    <div class="build">
+    <div class="build" data-reveal style="--i:2">
       <h3>Building from source</h3>
       <p>Dex builds with the JDK that ships inside Android Studio.</p>
       <pre><code><span class="c">export</span> JAVA_HOME=<span class="s">"/Applications/Android Studio.app/Contents/jbr/Contents/Home"</span>
@@ -255,7 +267,7 @@
       <p class="muted">APKs land in <code>app/build/outputs/apk/debug/</code>.</p>
     </div>
 
-    <p class="note">
+    <p class="note" data-reveal style="--i:3">
       Dex is a personal project and the app repository is private for now, so there's no
       public download yet.
     </p>
