@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dex — A Coding Environment for Android</title>
+
+<meta name="description" content="Dex is a coding environment for Android phones. Terminals, files, Git, GitHub pull requests and Claude Code, on the phone or on your own machines over SSH.">
+<meta name="author" content="Minhajur Rahman Chowdhury Mahim">
+<meta name="theme-color" content="#07080a">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dex — A Coding Environment for Android">
+<meta property="og:description" content="Terminals, files, Git, GitHub pull requests and Claude Code, on the phone or on your own machines over SSH.">
+<meta property="og:image" content="assets/img/logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/img/icon.png">
+<link rel="apple-touch-icon" href="assets/img/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <img src="assets/img/logo.webp" alt="" width="28" height="28">
+      <span>Dex</span>
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#features">What it does</a>
+      <a href="#machines">Machines</a>
+      <a href="#start">Get started</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ───────────────────────── hero ───────────────────────── -->
+<section class="hero" id="top">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="dot"></span> Personal project · in development</p>
+      <h1>A coding environment<br>for <span class="accent">Android</span>.</h1>
+      <p class="lede">
+        Terminals, files, Git, GitHub pull requests and Claude Code — running on the phone
+        itself, or on your own computers over SSH.
+      </p>
+      <p class="sub">
+        Laid out for one thumb. Tabs at the bottom, what's open in each tab in a strip above
+        them, and the machine you're on as a chip at the top.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#features">See what it does</a>
+        <a class="btn" href="#start">Build it</a>
+      </div>
+    </div>
+
+    <div class="hero-shot">
+      <div class="phone">
+        <img src="assets/img/terminal.webp" alt="The Dex terminal on a phone, showing the welcome message and the bottom tab bar." width="1080" height="2340" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── showcase ───────────────────────── -->
+<section class="showcase" id="features">
+  <div class="wrap">
+    <div class="show-head">
+      <h2 class="section-title sm">Four tabs, one thumb</h2>
+      <p class="show-sub">Everything sits behind the bar at the bottom, where your thumb already is.</p>
+    </div>
+
+    <div class="show-grid">
+      <div class="phone phone-lg">
+        <div class="screen">
+          <div class="track" id="track">
+            <img src="assets/img/terminal.webp" alt="The Dex terminal tab." width="1080" height="2340" loading="eager">
+            <img src="assets/img/files.webp" alt="The Dex file tree, with Git status on each entry." width="1080" height="2340" loading="eager">
+            <img src="assets/img/claude.webp" alt="Claude Code conversations inside Dex." width="1080" height="2340" loading="eager">
+            <img src="assets/img/git.webp" alt="The Git tab, with changes and pull requests." width="1080" height="2340" loading="eager">
+          </div>
+        </div>
+      </div>
+
+      <div class="show-text">
+        <div id="panels">
+          <article class="panel is-on" data-panel="terminal">
+            <h3>Terminal</h3>
+            <ul>
+              <li>Several terminals per machine, switched from the strip above the tabs.</li>
+              <li>An extra keys toolbar — <kbd>ESC</kbd>, <kbd>CTRL</kbd>, <kbd>ALT</kbd>, arrows — above the keyboard.</li>
+              <li>The keyboard opens only when you tap the terminal, so switching tabs doesn't pop it up.</li>
+              <li>Terminals keep running in the background. The notification can hold a wake lock, so long jobs survive the screen going off.</li>
+            </ul>
+          </article>
+
+          <article class="panel" data-panel="files">
+            <h3>Files</h3>
+            <ul>
+              <li>A tree of the workspace folder with Git status on every file and folder: changed, added, untracked.</li>
+              <li>Text opens in an editor with syntax highlighting, line numbers, wrapping, undo and redo.</li>
+              <li>Images, video, audio and PDFs open in their own viewers.</li>
+              <li>On an SSH host, upload and download with progress.</li>
+            </ul>
+          </article>
+
+          <article class="panel" data-panel="claude">
+            <h3>Claude Code</h3>
+            <ul>
+              <li>Chats with Claude Code, running on the machine the workspace is on.</li>
+              <li>Pick the model, the effort, and the permission mode — ask before edits, accept edits, auto, or bypass.</li>
+              <li>Find text in a chat, and search past conversations.</li>
+              <li>Tap a file Claude mentions and it opens; go back and you're in the chat again.</li>
+              <li>A notification when Claude replies or asks permission while you're elsewhere.</li>
+            </ul>
+          </article>
+
+          <article class="panel" data-panel="git">
+            <h3>Git &amp; pull requests</h3>
+            <ul>
+              <li>The repository's changes, with a diff for each file. Stage, unstage, discard, commit, push, pull.</li>
+              <li>Switch and create branches.</li>
+              <li>GitHub pull requests for the workspace repo, with filters — read one, review it, merge it, or open a new one.</li>
+              <li>Git runs on the machine the workspace is on, not on the phone.</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="hint">Cycling through the tabs — tap one to take over.</p>
+      </div>
+    </div>
+
+    <!-- the app's own bottom bar, as the control -->
+    <div class="tabbar" role="tablist" aria-label="Feature tabs">
+      <button class="tab is-on" role="tab" aria-selected="true" data-tab="terminal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l6 6-6 6"/><path d="M13 18h7"/></svg>
+        <span>Terminal</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="files">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        <span>Files</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="claude">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
+        <span>Claude</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="git">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="6" r="2.2"/><circle cx="7" cy="18" r="2.2"/><circle cx="17" cy="9" r="2.2"/><path d="M7 8.2v7.6M17 11.2c0 3-4 2.6-7 4"/></svg>
+        <span>Git</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── machines ───────────────────────── -->
+<section class="machines" id="machines">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2 class="section-title">Your machines, from your pocket</h2>
+        <p class="section-lede">
+          The hosts in your <code>~/.ssh/config</code> open as workspaces. The phone and any
+          number of SSH hosts stay connected at once — switch between them from the chip at
+          the top.
+        </p>
+        <ul class="ticks">
+          <li>One shared SSH connection per host, so files, Git and Claude never ask you to log in twice.</li>
+          <li>Create and manage SSH keys inside the app.</li>
+          <li>A command palette to open files and run commands.</li>
+          <li>A switcher showing everything open across every tab — swipe up to reach it.</li>
+        </ul>
+      </div>
+
+      <figure class="wires" aria-label="One phone connected to several machines over SSH.">
+        <div class="wire-node wire-phone">
+          <span class="wire-ic">▣</span>
+          <b>This phone</b>
+          <small>local Linux prefix</small>
+        </div>
+        <div class="wire-rail" aria-hidden="true"></div>
+        <div class="wire-hosts">
+          <div class="wire-node"><span class="wire-ic">⬡</span><b>workstation</b><small>one SSH connection</small></div>
+          <div class="wire-node"><span class="wire-ic">⬡</span><b>gpu-box</b><small>one SSH connection</small></div>
+          <div class="wire-node"><span class="wire-ic">⬡</span><b>server</b><small>one SSH connection</small></div>
+        </div>
+        <figcaption>Files, Git, pull requests and Claude all run on whichever machine the workspace is on.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── wide screens ───────────────────────── -->
+<section class="wide">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2 class="section-title sm">Not only phones</h2>
+        <p class="section-lede">
+          On tablets and Samsung DeX, Dex lays itself out like a desktop IDE — the file tree
+          beside your work, the terminal below it.
+        </p>
+      </div>
+      <div class="band-art" aria-hidden="true">
+        <div class="ide">
+          <div class="ide-side"></div>
+          <div class="ide-main">
+            <div class="ide-editor"></div>
+            <div class="ide-term"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── get started ───────────────────────── -->
+<section class="start" id="start">
+  <div class="wrap">
+    <h2 class="section-title">Getting started</h2>
+
+    <ol class="steps">
+      <li>
+        <h3>Install the APK</h3>
+        <p>Dex needs Android 7 or later on a 64-bit ARM phone. The app id is <code>com.dex</code>, so it installs next to Termux rather than replacing it.</p>
+      </li>
+      <li>
+        <h3>Open it</h3>
+        <p>The first start unpacks a small Linux system and walks you through a tour, which you can watch again later from the workspace sheet.</p>
+      </li>
+      <li>
+        <h3>Add your machines</h3>
+        <p>Put a host in <code>~/.ssh/config</code>, or use <em>Add or edit SSH hosts</em> from the workspace chip. Tap the host, log in once in the terminal that opens, and files, Git and Claude follow you there.</p>
+      </li>
+    </ol>
+
+    <div class="build">
+      <h3>Building from source</h3>
+      <p>Dex builds with the JDK that ships inside Android Studio.</p>
+      <pre><code><span class="c">export</span> JAVA_HOME=<span class="s">"/Applications/Android Studio.app/Contents/jbr/Contents/Home"</span>
+./gradlew :app:assembleDebug</code></pre>
+      <p class="muted">APKs land in <code>app/build/outputs/apk/debug/</code>.</p>
+    </div>
+
+    <p class="note">
+      Dex is a personal project and the app repository is private for now, so there's no
+      public download yet.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand"><img src="assets/img/logo.webp" alt="" width="22" height="22"> Dex</p>
+      <p class="muted">Built by <a href="https://minhaj1403.github.io">Minhajur Rahman Chowdhury Mahim</a>.</p>
+    </div>
+    <p class="muted foot-legal">
+      Dex started as a fork of <a href="https://github.com/termux/termux-app" target="_blank" rel="noopener">termux-app</a>
+      and has since replaced all of Termux's GPL code with its own. It keeps Termux's
+      <code>terminal-emulator</code> and <code>terminal-view</code> libraries, which are
+      Apache&nbsp;2.0. Dex is not affiliated with Termux.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
