@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dex — A Coding Environment for Android</title>
+<title>Dex: A Coding Environment for Android</title>
 
 <meta name="description" content="Dex is a coding environment for Android phones. Terminals, files, Git, GitHub pull requests and Claude Code, on the phone or on your own machines over SSH.">
 <meta name="author" content="Minhajur Rahman Chowdhury Mahim">
 <meta name="theme-color" content="#07080a">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dex — A Coding Environment for Android">
+<meta property="og:title" content="Dex: A Coding Environment for Android">
 <meta property="og:description" content="Terminals, files, Git, GitHub pull requests and Claude Code, on the phone or on your own machines over SSH.">
 <meta property="og:image" content="assets/img/logo.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -61,8 +61,8 @@
       <p class="eyebrow" data-reveal style="--i:0"><span class="dot"></span> Personal project · in development</p>
       <h1 data-reveal style="--i:1">A coding environment<br>for <span class="accent">Android</span>.</h1>
       <p class="lede" data-reveal style="--i:2">
-        Terminals, files, Git, GitHub pull requests and Claude Code — running on the phone
-        itself, or on your own computers over SSH.
+        Terminals, files, Git, GitHub pull requests and Claude Code, running on the phone
+        itself or on your own computers over SSH.
       </p>
       <p class="sub" data-reveal style="--i:3">
         Laid out for one thumb. Tabs at the bottom, what's open in each tab in a strip above
@@ -108,7 +108,7 @@
             <h3>Terminal</h3>
             <ul>
               <li>Several terminals per machine, switched from the strip above the tabs.</li>
-              <li>An extra keys toolbar — <kbd>ESC</kbd>, <kbd>CTRL</kbd>, <kbd>ALT</kbd>, arrows — above the keyboard.</li>
+              <li>An extra keys toolbar above the keyboard, with <kbd>ESC</kbd>, <kbd>CTRL</kbd>, <kbd>ALT</kbd> and the arrow keys.</li>
               <li>The keyboard opens only when you tap the terminal, so switching tabs doesn't pop it up.</li>
               <li>Terminals keep running in the background. The notification can hold a wake lock, so long jobs survive the screen going off.</li>
             </ul>
@@ -128,7 +128,7 @@
             <h3>Claude Code</h3>
             <ul>
               <li>Chats with Claude Code, running on the machine the workspace is on.</li>
-              <li>Pick the model, the effort, and the permission mode — ask before edits, accept edits, auto, or bypass.</li>
+              <li>Pick the model, the effort, and the permission mode, from asking before every edit to bypassing the prompts entirely.</li>
               <li>Find text in a chat, and search past conversations.</li>
               <li>Tap a file Claude mentions and it opens; go back and you're in the chat again.</li>
               <li>A notification when Claude replies or asks permission while you're elsewhere.</li>
@@ -140,13 +140,13 @@
             <ul>
               <li>The repository's changes, with a diff for each file. Stage, unstage, discard, commit, push, pull.</li>
               <li>Switch and create branches.</li>
-              <li>GitHub pull requests for the workspace repo, with filters — read one, review it, merge it, or open a new one.</li>
+              <li>GitHub pull requests for the workspace repo, with filters. Read one, review it, merge it, or open a new one.</li>
               <li>Git runs on the machine the workspace is on, not on the phone.</li>
             </ul>
           </article>
         </div>
 
-        <p class="hint">Cycling through the tabs — tap one to take over.</p>
+        <p class="hint">Cycling through the tabs. Tap one to take over.</p>
       </div>
     </div>
 
@@ -184,14 +184,14 @@
         <h2 class="section-title">Your machines, from your pocket</h2>
         <p class="section-lede">
           The hosts in your <code>~/.ssh/config</code> open as workspaces. The phone and any
-          number of SSH hosts stay connected at once — switch between them from the chip at
-          the top.
+          number of SSH hosts stay connected at once, and you switch between them from the
+          chip at the top.
         </p>
         <ul class="ticks">
           <li>One shared SSH connection per host, so files, Git and Claude never ask you to log in twice.</li>
           <li>Create and manage SSH keys inside the app.</li>
           <li>A command palette to open files and run commands.</li>
-          <li>A switcher showing everything open across every tab — swipe up to reach it.</li>
+          <li>A switcher showing everything open across every tab, reached by swiping up.</li>
         </ul>
       </div>
 
@@ -220,8 +220,8 @@
       <div>
         <h2 class="section-title sm">Not only phones</h2>
         <p class="section-lede">
-          On tablets and Samsung DeX, Dex lays itself out like a desktop IDE — the file tree
-          beside your work, the terminal below it.
+          On tablets and Samsung DeX, Dex lays itself out like a desktop IDE, with the file
+          tree beside your work and the terminal below it.
         </p>
       </div>
       <div class="band-art" aria-hidden="true">
@@ -247,7 +247,7 @@
     <ol class="steps" data-reveal style="--i:1">
       <li>
         <h3>Install the APK</h3>
-        <p>Dex needs Android 7 or later on a 64-bit ARM phone. The app id is <code>com.dex</code>, so it installs next to Termux rather than replacing it.</p>
+        <p>Dex needs Android 7 or later on a 64-bit ARM phone. It installs under its own app id, <code>com.dex</code>, so it sits alongside whatever is already on the phone.</p>
       </li>
       <li>
         <h3>Open it</h3>
@@ -283,10 +283,8 @@
       <p class="muted">Built by <a href="https://minhaj1403.github.io">Minhajur Rahman Chowdhury Mahim</a>.</p>
     </div>
     <p class="muted foot-legal">
-      Dex started as a fork of <a href="https://github.com/termux/termux-app" target="_blank" rel="noopener">termux-app</a>
-      and has since replaced all of Termux's GPL code with its own. It keeps Termux's
-      <code>terminal-emulator</code> and <code>terminal-view</code> libraries, which are
-      Apache&nbsp;2.0. Dex is not affiliated with Termux.
+      Dex is built on open-source components. Their licenses are listed inside the app,
+      under Settings, Open-source licenses.
     </p>
   </div>
 </footer>
