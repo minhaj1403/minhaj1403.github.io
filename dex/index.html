@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dex: A Coding Environment for Android</title>
 
-<meta name="description" content="Dex is a coding environment for Android phones. Terminals, files, Git, GitHub pull requests and Claude Code, on the phone or on your own machines over SSH.">
+<meta name="description" content="Dex is a coding environment for Android phones. Terminals, files, Git, GitHub pull requests and the coding agent of your choice, on the phone or on your own machines over SSH.">
 <meta name="author" content="Minhajur Rahman Chowdhury Mahim">
 <meta name="theme-color" content="#07080a">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Dex: A Coding Environment for Android">
-<meta property="og:description" content="Terminals, files, Git, GitHub pull requests and Claude Code, on the phone or on your own machines over SSH.">
+<meta property="og:description" content="Terminals, files, Git, GitHub pull requests and the coding agent of your choice, on the phone or on your own machines over SSH.">
 <meta property="og:image" content="assets/img/logo.webp">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -25,7 +25,7 @@
 
 <noscript><style>
   /* without JS nothing can reveal itself, so show everything outright */
-  [data-reveal], .ticks li, .steps li,
+  [data-reveal], .ticks li, .steps li, .notes .note,
   .ide-side, .ide-editor, .ide-term { opacity: 1 !important; transform: none !important; }
   .ide-editor .ln { width: 60% !important; }
   .progress { display: none; }
@@ -46,6 +46,7 @@
     <nav class="nav-links" aria-label="Sections">
       <a href="#features">What it does</a>
       <a href="#machines">Machines</a>
+      <a href="#agents">Agents</a>
       <a href="#start">Get started</a>
     </nav>
   </div>
@@ -61,8 +62,8 @@
       <p class="eyebrow" data-reveal style="--i:0"><span class="dot"></span> Personal project · in development</p>
       <h1 data-reveal style="--i:1">A coding environment<br>for <span class="accent">Android</span>.</h1>
       <p class="lede" data-reveal style="--i:2">
-        Terminals, files, Git, GitHub pull requests and Claude Code, running on the phone
-        itself or on your own computers over SSH.
+        Terminals, files, Git, GitHub pull requests and the coding agent of your choice,
+        running on the phone itself or on your own computers over SSH.
       </p>
       <p class="sub" data-reveal style="--i:3">
         Laid out for one thumb. Tabs at the bottom, what's open in each tab in a strip above
@@ -96,7 +97,7 @@
           <div class="track" id="track">
             <img src="assets/img/terminal.webp" alt="The Dex terminal tab." width="1080" height="2340" loading="eager">
             <img src="assets/img/files.webp" alt="The Dex file tree, with Git status on each entry." width="1080" height="2340" loading="eager">
-            <img src="assets/img/claude.webp" alt="Claude Code conversations inside Dex." width="1080" height="2340" loading="eager">
+            <img src="assets/img/agent.webp" alt="Coding agent conversations inside Dex." width="1080" height="2340" loading="eager">
             <img src="assets/img/git.webp" alt="The Git tab, with changes and pull requests." width="1080" height="2340" loading="eager">
           </div>
         </div>
@@ -125,13 +126,13 @@
           </article>
 
           <article class="panel" data-panel="claude">
-            <h3>Claude Code</h3>
+            <h3>Coding agents</h3>
             <ul>
-              <li>Chats with Claude Code, running on the machine the workspace is on.</li>
+              <li>Chats with the coding agent of your choice, Claude Code or Codex, running on the machine the workspace is on.</li>
               <li>Pick the model, the effort, and the permission mode, from asking before every edit to bypassing the prompts entirely.</li>
               <li>Find text in a chat, and search past conversations.</li>
-              <li>Tap a file Claude mentions and it opens; go back and you're in the chat again.</li>
-              <li>A notification when Claude replies or asks permission while you're elsewhere.</li>
+              <li>Tap a file the agent mentions and it opens; go back and you're in the chat again.</li>
+              <li>A notification when the agent replies or asks permission while you're elsewhere.</li>
             </ul>
           </article>
 
@@ -163,8 +164,8 @@
         <i class="bar" aria-hidden="true"></i>
       </button>
       <button class="tab" role="tab" aria-selected="false" data-tab="claude">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4"/></svg>
-        <span>Claude</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.9l7.3 4.2v8.4L12 19.7 4.7 15.5V7.1z"/><path d="M12 8.5l1.1 2.4 2.4 1.1-2.4 1.1L12 15.5l-1.1-2.4L8.5 12l2.4-1.1z"/></svg>
+        <span>Agent</span>
         <i class="bar" aria-hidden="true"></i>
       </button>
       <button class="tab" role="tab" aria-selected="false" data-tab="git">
@@ -188,7 +189,7 @@
           chip at the top.
         </p>
         <ul class="ticks">
-          <li>One shared SSH connection per host, so files, Git and Claude never ask you to log in twice.</li>
+          <li>One shared SSH connection per host, so files, Git and the agent never ask you to log in twice.</li>
           <li>Create and manage SSH keys inside the app.</li>
           <li>A command palette to open files and run commands.</li>
           <li>A switcher showing everything open across every tab, reached by swiping up.</li>
@@ -207,7 +208,54 @@
           <div class="wire-node" style="--h:1"><span class="wire-ic">⬡</span><b>gpu-box</b><small>one SSH connection</small></div>
           <div class="wire-node" style="--h:2"><span class="wire-ic">⬡</span><b>server</b><small>one SSH connection</small></div>
         </div>
-        <figcaption>Files, Git, pull requests and Claude all run on whichever machine the workspace is on.</figcaption>
+        <figcaption>Files, Git, pull requests and the agent all run on whichever machine the workspace is on.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── agents ───────────────────────── -->
+<section class="agents" id="agents">
+  <div class="wrap">
+    <div class="split">
+      <div data-reveal>
+        <h2 class="section-title">The agent of your choice, already on your machine</h2>
+        <p class="section-lede">
+          Claude Code or Codex, running on the machine the workspace is on, reached from the
+          phone in your hand. A new chat asks which agent to use, and offers to install one
+          that is missing.
+        </p>
+        <ul class="ticks">
+          <li>Each chat keeps its own agent, model, effort and permission mode.</li>
+          <li>One list of every conversation, newest first, marked by agent.</li>
+          <li>A notification the moment an agent finishes or needs you, wherever you are.</li>
+          <li>Unseen updates counted on the tab. Tap one to open the chat.</li>
+        </ul>
+      </div>
+
+      <figure class="notes" data-reveal style="--i:1" aria-label="Notifications from agents arriving on the phone.">
+        <div class="note" style="--n:0">
+          <span class="note-ic" aria-hidden="true">◆</span>
+          <div class="note-txt">
+            <b>gpu-box · Claude Code</b>
+            <small>Finished the refactor. 3 updates waiting.</small>
+          </div>
+        </div>
+        <div class="note" style="--n:1">
+          <span class="note-ic" aria-hidden="true">◆</span>
+          <div class="note-txt">
+            <b>workstation · Codex</b>
+            <small>Needs your approval to write a file.</small>
+          </div>
+        </div>
+        <div class="note" style="--n:2">
+          <span class="note-ic" aria-hidden="true">◆</span>
+          <div class="note-txt">
+            <b>server · Claude Code</b>
+            <small>Asked you a question.</small>
+          </div>
+        </div>
+        <figcaption>The work carries on where it started. The phone only tells you about it.</figcaption>
       </figure>
     </div>
   </div>
@@ -255,7 +303,7 @@
       </li>
       <li>
         <h3>Add your machines</h3>
-        <p>Put a host in <code>~/.ssh/config</code>, or use <em>Add or edit SSH hosts</em> from the workspace chip. Tap the host, log in once in the terminal that opens, and files, Git and Claude follow you there.</p>
+        <p>Put a host in <code>~/.ssh/config</code>, or use <em>Add or edit SSH hosts</em> from the workspace chip. Tap the host, log in once in the terminal that opens, and files, Git and the agent follow you there.</p>
       </li>
     </ol>
 
