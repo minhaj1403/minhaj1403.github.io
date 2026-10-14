@@ -688,3 +688,86 @@ pre .s { color: #8fd98f; }
 
 @media (max-width: 720px) { .lang { margin-left: auto; } }
 @media (max-width: 560px) { .lang a { padding: .26rem .5rem; font-size: .74rem; } }
+
+/* ═════════════════════════════════════════════
+   Phones: a shorter, tighter version of the page
+   ═════════════════════════════════════════════ */
+
+/* the hero glow used to stick out to the sides and gave the page a
+   horizontal scroll on narrow screens */
+body { overflow-x: clip; }
+.glow { inset: -20% 0 auto 0; }
+
+@media (max-width: 700px) {
+  .hero { padding: 34px 0 44px; }
+  .hero-in { gap: 30px; }
+
+  h1 { font-size: clamp(2rem, 8.6vw, 2.5rem); line-height: 1.08; letter-spacing: -.03em; }
+
+  .eyebrow { margin-bottom: 16px; font-size: .7rem; padding: .32rem .6rem; }
+  .lede { font-size: 1rem; margin-bottom: 12px; }
+  .sub  { font-size: .91rem; margin-bottom: 24px; }
+
+  /* full-width buttons sit better under a thumb */
+  .cta { gap: 10px; }
+  .cta .btn { flex: 1 1 0; min-width: 0; min-height: 46px; padding: .7rem 1rem; }
+
+  /* the hero shows the top of the screen only, so the fold stays reachable */
+  .hero-shot .phone { max-width: 208px; padding: 6px; border-radius: 24px; }
+  .hero-shot .phone img {
+    height: 266px; object-fit: cover; object-position: top;
+    border-radius: 19px;
+    -webkit-mask-image: linear-gradient(#000 76%, transparent);
+            mask-image: linear-gradient(#000 76%, transparent);
+  }
+
+  .section-title    { font-size: clamp(1.45rem, 5.6vw, 1.8rem); }
+  .section-title.sm { font-size: clamp(1.3rem, 5vw, 1.6rem); }
+  .section-lede     { font-size: .96rem; margin-bottom: 26px; }
+
+  .showcase { padding: 30px 0 26px; }
+  .show-head { margin-bottom: 16px; }
+  .show-sub { font-size: .9rem; }
+  .show-grid { gap: 22px; margin-bottom: 18px; }
+  .show-grid .phone-lg { max-width: 196px; padding: 6px; border-radius: 24px; }
+  .show-grid .screen { border-radius: 19px; }
+  .panel h3 { font-size: 1.1rem; margin-bottom: 10px; }
+  .panel li { font-size: .89rem; padding-left: 20px; }
+  .panel ul { gap: 7px; }
+  .hint { margin-top: 14px; font-size: .68rem; }
+
+  .machines, .agents, .start { padding: 46px 0; }
+  .wide { padding-bottom: 46px; }
+  .band { padding: 22px; }
+  .start { padding-bottom: 56px; }
+
+  .ticks { gap: 11px; }
+  .ticks li { font-size: .93rem; padding-left: 24px; }
+
+  .wires, .notes { padding: 15px; }
+  .wire-node, .notes .note { padding: 11px 13px; }
+  .wires figcaption, .notes figcaption { font-size: .8rem; margin-top: 13px; }
+  .notes .note-txt b { font-size: .88rem; }
+  .notes .note-txt small { font-size: .77rem; }
+
+  .steps { gap: 12px; margin-bottom: 30px; }
+  .steps li { padding: 18px; }
+  .steps p { font-size: .89rem; }
+  .build { padding: 18px; }
+
+  /* long commands wrap instead of scrolling sideways */
+  pre { font-size: .78rem; line-height: 1.7; padding: 13px 14px; white-space: pre-wrap; word-break: break-word; }
+
+  .note { margin-top: 24px; font-size: .89rem; padding: 13px 15px; }
+  .foot { padding: 30px 0; }
+  .foot-in { gap: 18px; }
+}
+
+@media (max-width: 420px) {
+  .hero-shot .phone { max-width: 186px; }
+  .hero-shot .phone img { height: 238px; }
+  .show-grid .phone-lg { max-width: 178px; }
+  .tab { font-size: .66rem; gap: 4px; padding: 9px 2px 7px; }
+  .tab svg { width: 18px; height: 18px; }
+  .tabbar { padding: 6px; border-radius: 15px; }
+}
