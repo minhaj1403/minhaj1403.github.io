@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dex: অ্যান্ড্রয়েডের জন্য কোডিং পরিবেশ</title>
+
+<meta name="description" content="Dex হলো অ্যান্ড্রয়েড ফোনের জন্য একটি কোডিং পরিবেশ। টার্মিনাল, ফাইল, Git, GitHub পুল রিকোয়েস্ট আর আপনার পছন্দের কোডিং এজেন্ট, ফোনেই বা SSH দিয়ে নিজের মেশিনে।">
+<meta name="author" content="Minhajur Rahman Chowdhury Mahim">
+<meta name="theme-color" content="#07080a">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dex: অ্যান্ড্রয়েডের জন্য কোডিং পরিবেশ">
+<meta property="og:description" content="টার্মিনাল, ফাইল, Git, GitHub পুল রিকোয়েস্ট আর আপনার পছন্দের কোডিং এজেন্ট, ফোনেই বা SSH দিয়ে নিজের মেশিনে।">
+<meta property="og:image" content="../assets/img/logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/img/icon.png">
+<link rel="apple-touch-icon" href="../assets/img/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap">
+<style>:root { --sans: "Geist", "Noto Sans Bengali", ui-sans-serif, system-ui, sans-serif; }</style>
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+<noscript><style>
+  /* without JS nothing can reveal itself, so show everything outright */
+  [data-reveal], .ticks li, .steps li, .notes .note,
+  .ide-side, .ide-editor, .ide-term { opacity: 1 !important; transform: none !important; }
+  .ide-editor .ln { width: 60% !important; }
+  .progress { display: none; }
+</style></noscript>
+</head>
+<body>
+
+<a class="skip" href="#main">মূল অংশে যান</a>
+
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <img src="../assets/img/logo.webp" alt="" width="28" height="28">
+      <span>Dex</span>
+    </a>
+    <nav class="nav-links" aria-label="অংশসমূহ">
+      <a href="#features">যা করে</a>
+      <a href="#machines">মেশিন</a>
+      <a href="#agents">এজেন্ট</a>
+      <a href="#start">শুরু করুন</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <a href="../" hreflang="en">EN</a>
+      <a href="../ko/" hreflang="ko">한</a>
+      <a href="../bn/" class="is-on" aria-current="page" hreflang="bn">বাং</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ───────────────────────── hero ───────────────────────── -->
+<section class="hero" id="top">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow" data-reveal style="--i:0"><span class="dot"></span> ব্যক্তিগত প্রকল্প · নির্মাণাধীন</p>
+      <h1 data-reveal style="--i:1"><span class="accent">অ্যান্ড্রয়েডের</span> জন্য<br>কোডিং পরিবেশ।</h1>
+      <p class="lede" data-reveal style="--i:2">
+        টার্মিনাল, ফাইল, Git, GitHub পুল রিকোয়েস্ট আর আপনার পছন্দের কোডিং এজেন্ট,
+        ফোনেই চলে অথবা SSH দিয়ে নিজের কম্পিউটারে।
+      </p>
+      <p class="sub" data-reveal style="--i:3">
+        এক আঙুলে চালানোর মতো করে সাজানো। নিচে ট্যাব, তার উপরের সারিতে প্রতিটি ট্যাবে যা খোলা
+        আছে, আর উপরে চিপে এখন যে মেশিনে আছেন সেটি।
+      </p>
+      <div class="cta" data-reveal style="--i:4">
+        <a class="btn btn-primary" href="#features">কী করে দেখুন</a>
+        <a class="btn" href="#start">নিজে বিল্ড করুন</a>
+      </div>
+    </div>
+
+    <div class="hero-shot" data-reveal style="--i:3">
+      <div class="phone float" id="heroPhone">
+        <img src="../assets/img/terminal.webp" alt="ফোনে চলা Dex টার্মিনাল, স্বাগত বার্তা আর নিচের ট্যাব বার দেখা যাচ্ছে।" width="1080" height="2340" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── showcase ───────────────────────── -->
+<section class="showcase" id="features">
+  <div class="wrap">
+    <div class="show-head" data-reveal>
+      <h2 class="section-title sm">চারটি ট্যাব, এক আঙুল</h2>
+      <p class="show-sub">সবকিছু নিচের বারের পেছনে, যেখানে আপনার আঙুল এমনিতেই থাকে।</p>
+    </div>
+
+    <div class="show-grid" data-reveal style="--i:1">
+      <div class="phone phone-lg">
+        <div class="screen">
+          <div class="track" id="track">
+            <img src="../assets/img/terminal.webp" alt="Dex এর টার্মিনাল ট্যাব।" width="1080" height="2340" loading="eager">
+            <img src="../assets/img/files.webp" alt="Dex এর ফাইল ট্রি, প্রতিটি এন্ট্রিতে Git অবস্থা সহ।" width="1080" height="2340" loading="eager">
+            <img src="../assets/img/agent.webp" alt="Dex এর ভেতরে কোডিং এজেন্টের কথোপকথন।" width="1080" height="2340" loading="eager">
+            <img src="../assets/img/git.webp" alt="Git ট্যাব, পরিবর্তন আর পুল রিকোয়েস্ট সহ।" width="1080" height="2340" loading="eager">
+          </div>
+        </div>
+      </div>
+
+      <div class="show-text">
+        <div id="panels">
+          <article class="panel is-on" data-panel="terminal">
+            <h3>টার্মিনাল</h3>
+            <ul>
+              <li>প্রতি মেশিনে একাধিক টার্মিনাল, ট্যাবের উপরের সারি থেকে বদলানো যায়।</li>
+              <li>কিবোর্ডের উপরে বাড়তি কি এর সারি, <kbd>ESC</kbd>, <kbd>CTRL</kbd>, <kbd>ALT</kbd> আর তীর চিহ্ন সহ।</li>
+              <li>টার্মিনালে চাপ দিলে তবেই কিবোর্ড ওঠে, তাই ট্যাব বদলালে সেটি লাফিয়ে ওঠে না।</li>
+              <li>টার্মিনাল পেছনেও চলতে থাকে। নোটিফিকেশন wake lock ধরে রাখতে পারে, তাই স্ক্রিন বন্ধ হলেও লম্বা কাজ চলতে থাকে।</li>
+            </ul>
+          </article>
+
+          <article class="panel" data-panel="files">
+            <h3>ফাইল</h3>
+            <ul>
+              <li>ওয়ার্কস্পেস ফোল্ডারের ট্রি, প্রতিটি ফাইল ও ফোল্ডারে Git অবস্থা সহ: পরিবর্তিত, যোগ করা, ট্র্যাক না করা।</li>
+              <li>টেক্সট খোলে এমন একটি এডিটরে, যাতে সিনট্যাক্স হাইলাইট, লাইন নম্বর, র‍্যাপিং, আনডু আর রিডু আছে।</li>
+              <li>ছবি, ভিডিও, অডিও আর PDF নিজস্ব ভিউয়ারে খোলে।</li>
+              <li>SSH হোস্টে অগ্রগতি দেখতে দেখতে আপলোড আর ডাউনলোড।</li>
+            </ul>
+          </article>
+
+          <article class="panel" data-panel="claude">
+            <h3>কোডিং এজেন্ট</h3>
+            <ul>
+              <li>আপনার পছন্দের কোডিং এজেন্টের সঙ্গে আলাপ, Claude Code বা Codex, ওয়ার্কস্পেস যে মেশিনে সেখানেই চলে।</li>
+              <li>মডেল, এফোর্ট আর অনুমতির ধরন বেছে নিন, প্রতিবার সম্পাদনার আগে জিজ্ঞেস করা থেকে শুরু করে একেবারেই না জিজ্ঞেস করা পর্যন্ত।</li>
+              <li>কথোপকথনের ভেতরে লেখা খুঁজুন, আর আগের আলাপগুলোতে সার্চ করুন।</li>
+              <li>এজেন্ট যে ফাইলের কথা বলে তাতে চাপ দিলে সেটি খোলে, ফিরে গেলে আবার আলাপেই।</li>
+              <li>আপনি অন্য কোথাও থাকলে এজেন্ট উত্তর দিলে বা অনুমতি চাইলে নোটিফিকেশন আসে।</li>
+            </ul>
+          </article>
+
+          <article class="panel" data-panel="git">
+            <h3>Git ও পুল রিকোয়েস্ট</h3>
+            <ul>
+              <li>রিপোজিটরির পরিবর্তন, প্রতিটি ফাইলের ডিফ সহ। স্টেজ, আনস্টেজ, বাতিল, কমিট, পুশ, পুল।</li>
+              <li>ব্রাঞ্চ বদলান আর নতুন ব্রাঞ্চ বানান।</li>
+              <li>ওয়ার্কস্পেসের রিপোর GitHub পুল রিকোয়েস্ট, ফিল্টার সহ। পড়ুন, রিভিউ করুন, মার্জ করুন, বা নতুন একটি খুলুন।</li>
+              <li>Git চলে ওয়ার্কস্পেস যে মেশিনে সেখানে, ফোনে নয়।</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="hint">ট্যাবগুলো ঘুরে ঘুরে দেখাচ্ছে। একটিতে চাপ দিলে থেমে যাবে।</p>
+      </div>
+    </div>
+
+    <!-- the app's own bottom bar, as the control -->
+    <div class="tabbar" data-reveal style="--i:2" role="tablist" aria-label="ফিচার ট্যাব">
+      <button class="tab is-on" role="tab" aria-selected="true" data-tab="terminal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l6 6-6 6"/><path d="M13 18h7"/></svg>
+        <span>টার্মিনাল</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="files">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        <span>ফাইল</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="claude">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.9l7.3 4.2v8.4L12 19.7 4.7 15.5V7.1z"/><path d="M12 8.5l1.1 2.4 2.4 1.1-2.4 1.1L12 15.5l-1.1-2.4L8.5 12l2.4-1.1z"/></svg>
+        <span>এজেন্ট</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="git">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="6" r="2.2"/><circle cx="7" cy="18" r="2.2"/><circle cx="17" cy="9" r="2.2"/><path d="M7 8.2v7.6M17 11.2c0 3-4 2.6-7 4"/></svg>
+        <span>Git</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── machines ───────────────────────── -->
+<section class="machines" id="machines">
+  <div class="wrap">
+    <div class="split">
+      <div data-reveal>
+        <h2 class="section-title">পকেট থেকেই আপনার মেশিনগুলো</h2>
+        <p class="section-lede">
+          আপনার <code>~/.ssh/config</code> এর হোস্টগুলো ওয়ার্কস্পেস হিসেবে খোলে। ফোন আর যত খুশি
+          SSH হোস্ট একসঙ্গে যুক্ত থাকে, আর উপরের চিপ থেকে এদের মধ্যে বদল করা যায়।
+        </p>
+        <ul class="ticks">
+          <li>প্রতি হোস্টে একটিই শেয়ার করা SSH সংযোগ, তাই ফাইল, Git আর এজেন্ট দুবার লগইন চায় না।</li>
+          <li>অ্যাপের ভেতরেই SSH কি বানান আর সামলান।</li>
+          <li>ফাইল খুলতে আর কমান্ড চালাতে একটি কমান্ড প্যালেট।</li>
+          <li>উপরে সোয়াইপ করলে সব ট্যাবে যা খোলা আছে তার একটি সুইচার।</li>
+        </ul>
+      </div>
+
+      <figure class="wires" data-reveal style="--i:1" aria-label="একটি ফোন SSH দিয়ে কয়েকটি মেশিনে যুক্ত।">
+        <div class="wire-node wire-phone">
+          <span class="wire-ic">▣</span>
+          <b>এই ফোন</b>
+          <small>ফোনের ভেতরের লিনাক্স</small>
+        </div>
+        <div class="wire-rail" aria-hidden="true"><i class="spark"></i></div>
+        <div class="wire-hosts">
+          <div class="wire-node" style="--h:0"><span class="wire-ic">⬡</span><b>workstation</b><small>একটি SSH সংযোগ</small></div>
+          <div class="wire-node" style="--h:1"><span class="wire-ic">⬡</span><b>gpu-box</b><small>একটি SSH সংযোগ</small></div>
+          <div class="wire-node" style="--h:2"><span class="wire-ic">⬡</span><b>server</b><small>একটি SSH সংযোগ</small></div>
+        </div>
+        <figcaption>ফাইল, Git, পুল রিকোয়েস্ট আর এজেন্ট সবই চলে ওয়ার্কস্পেস যে মেশিনে সেখানে।</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── agents ───────────────────────── -->
+<section class="agents" id="agents">
+  <div class="wrap">
+    <div class="split">
+      <div data-reveal>
+        <h2 class="section-title">আপনার পছন্দের এজেন্ট, আপনার মেশিনেই</h2>
+        <p class="section-lede">
+          Claude Code বা Codex চলে ওয়ার্কস্পেস যে মেশিনে সেখানে, আর হাতের ফোন থেকেই তাতে পৌঁছানো
+          যায়। নতুন আলাপ শুরু করলে কোন এজেন্ট চান জিজ্ঞেস করে, না থাকলে ইনস্টল করে দিতে চায়।
+        </p>
+        <ul class="ticks">
+          <li>প্রতিটি আলাপ নিজের এজেন্ট, মডেল, এফোর্ট আর অনুমতির ধরন ধরে রাখে।</li>
+          <li>সব আলাপ এক তালিকায়, নতুনগুলো আগে, কোন এজেন্ট তা চিহ্নিত।</li>
+          <li>এজেন্ট কাজ শেষ করলে বা আপনাকে দরকার হলে সঙ্গে সঙ্গে নোটিফিকেশন, আপনি যেখানেই থাকুন।</li>
+          <li>না দেখা আপডেট ট্যাবে গোনা থাকে। একটিতে চাপ দিলে সেই আলাপ খোলে।</li>
+        </ul>
+      </div>
+
+      <figure class="notes" data-reveal style="--i:1" aria-label="এজেন্টদের পাঠানো নোটিফিকেশন ফোনে আসছে।">
+        <div class="note" style="--n:0">
+          <span class="note-ic" aria-hidden="true">◆</span>
+          <div class="note-txt">
+            <b>gpu-box · Claude Code</b>
+            <small>রিফ্যাক্টর শেষ। ৩টি আপডেট অপেক্ষা করছে।</small>
+          </div>
+        </div>
+        <div class="note" style="--n:1">
+          <span class="note-ic" aria-hidden="true">◆</span>
+          <div class="note-txt">
+            <b>workstation · Codex</b>
+            <small>ফাইল লিখতে আপনার অনুমতি দরকার।</small>
+          </div>
+        </div>
+        <div class="note" style="--n:2">
+          <span class="note-ic" aria-hidden="true">◆</span>
+          <div class="note-txt">
+            <b>server · Claude Code</b>
+            <small>আপনাকে একটি প্রশ্ন করেছে।</small>
+          </div>
+        </div>
+        <figcaption>কাজ চলতে থাকে যেখানে শুরু হয়েছিল। ফোন শুধু আপনাকে জানায়।</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── wide screens ───────────────────────── -->
+<section class="wide">
+  <div class="wrap">
+    <div class="band" data-reveal>
+      <div>
+        <h2 class="section-title sm">কেবল ফোনেই নয়</h2>
+        <p class="section-lede">
+          ট্যাবলেট আর বড় পর্দায় Dex নিজেকে ডেস্কটপ IDE এর মতো সাজায়, কাজের পাশে ফাইল ট্রি
+          আর তার নিচে টার্মিনাল।
+        </p>
+      </div>
+      <div class="band-art" aria-hidden="true">
+        <div class="ide">
+          <div class="ide-side"></div>
+          <div class="ide-main">
+            <div class="ide-editor">
+              <i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i>
+            </div>
+            <div class="ide-term"><i class="caret"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── get started ───────────────────────── -->
+<section class="start" id="start">
+  <div class="wrap">
+    <h2 class="section-title" data-reveal>শুরু করা</h2>
+
+    <ol class="steps" data-reveal style="--i:1">
+      <li>
+        <h3>APK ইনস্টল করুন</h3>
+        <p>Dex চালাতে ৬৪ বিট ARM ফোনে অ্যান্ড্রয়েড ৭ বা তার পরের সংস্করণ লাগে। এটি নিজের অ্যাপ আইডি <code>com.dex</code> দিয়ে ইনস্টল হয়, তাই ফোনে আগে থেকে যা আছে তার পাশেই থাকে।</p>
+      </li>
+      <li>
+        <h3>অ্যাপটি খুলুন</h3>
+        <p>প্রথমবার চালু হলে একটি ছোট লিনাক্স সিস্টেম খুলে নেয় আর একটি পরিচিতি দেখায়, যা পরে ওয়ার্কস্পেস শিট থেকে আবার দেখা যায়।</p>
+      </li>
+      <li>
+        <h3>আপনার মেশিন যোগ করুন</h3>
+        <p><code>~/.ssh/config</code> এ একটি হোস্ট লিখুন, অথবা ওয়ার্কস্পেস চিপ থেকে <em>Add or edit SSH hosts</em> ব্যবহার করুন। হোস্টে চাপ দিন, খোলা টার্মিনালে একবার লগইন করুন, তারপর ফাইল, Git আর এজেন্ট আপনার সঙ্গে সেখানে চলে যায়।</p>
+      </li>
+    </ol>
+
+    <div class="build" data-reveal style="--i:2">
+      <h3>সোর্স থেকে বিল্ড</h3>
+      <p>Dex বিল্ড হয় অ্যান্ড্রয়েড স্টুডিওর ভেতরে আসা JDK দিয়ে।</p>
+      <pre><code><span class="c">export</span> JAVA_HOME=<span class="s">"/Applications/Android Studio.app/Contents/jbr/Contents/Home"</span>
+./gradlew :app:assembleDebug</code></pre>
+      <p class="muted">APK জমা হয় <code>app/build/outputs/apk/debug/</code> এ।</p>
+    </div>
+
+    <p class="note" data-reveal style="--i:3">
+      Dex একটি ব্যক্তিগত প্রকল্প আর অ্যাপের রিপোজিটরি আপাতত ব্যক্তিগত, তাই এখনো কোনো
+      পাবলিক ডাউনলোড নেই।
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand"><img src="../assets/img/logo.webp" alt="" width="22" height="22"> Dex</p>
+      <p class="muted">বানিয়েছেন <a href="https://minhaj1403.github.io">Minhajur Rahman Chowdhury Mahim</a>।</p>
+    </div>
+    <p class="muted foot-legal">
+      Dex তৈরি হয়েছে ওপেন সোর্স উপাদানের উপর। সেগুলোর লাইসেন্স অ্যাপের ভেতরে সেটিংস, ওপেন
+      সোর্স লাইসেন্স অংশে দেওয়া আছে।
+    </p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

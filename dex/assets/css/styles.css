@@ -96,9 +96,11 @@ kbd {
   border-bottom: 1px solid var(--line);
 }
 .nav-in {
-  display: flex; align-items: center; justify-content: space-between;
+  display: flex; align-items: center;
   gap: 20px; height: 62px;
 }
+.nav-links { margin-left: auto; }
+.lang { margin-left: 4px; }
 .brand {
   display: inline-flex; align-items: center; gap: 10px;
   color: var(--ink); font-weight: 600; letter-spacing: -.01em; font-size: 1.05rem;
@@ -668,3 +670,21 @@ pre .s { color: #8fd98f; }
   .notes .note { opacity: 1; transform: none; }
   .notes.in .note-ic { animation: none; }
 }
+
+/* ───────────── language toggle ───────────── */
+.lang {
+  display: inline-flex; gap: 2px; padding: 3px; flex: none;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 100px;
+}
+.lang a {
+  display: inline-flex; align-items: center;
+  padding: .28rem .58rem; border-radius: 100px;
+  color: var(--ink-3); font-size: .78rem; font-weight: 500; line-height: 1.15;
+  transition: color .16s ease, background .16s ease;
+}
+.lang a:hover { color: var(--ink); background: rgba(255,255,255,.06); text-decoration: none; }
+.lang a.is-on { background: var(--accent-dim); color: var(--accent); }
+
+@media (max-width: 720px) { .lang { margin-left: auto; } }
+@media (max-width: 560px) { .lang a { padding: .26rem .5rem; font-size: .74rem; } }

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dex: 안드로이드를 위한 코딩 환경</title>
+
+<meta name="description" content="Dex는 안드로이드 휴대폰을 위한 코딩 환경입니다. 터미널, 파일, Git, GitHub 풀 리퀘스트, 그리고 원하는 코딩 에이전트를 휴대폰에서, 또는 SSH로 연결한 내 컴퓨터에서 쓸 수 있습니다.">
+<meta name="author" content="Minhajur Rahman Chowdhury Mahim">
+<meta name="theme-color" content="#07080a">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dex: 안드로이드를 위한 코딩 환경">
+<meta property="og:description" content="터미널, 파일, Git, GitHub 풀 리퀘스트, 그리고 원하는 코딩 에이전트를 휴대폰에서, 또는 SSH로 연결한 내 컴퓨터에서.">
+<meta property="og:image" content="../assets/img/logo.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="../assets/img/icon.png">
+<link rel="apple-touch-icon" href="../assets/img/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap">
+<style>:root { --sans: "Geist", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif; }</style>
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+<noscript><style>
+  /* without JS nothing can reveal itself, so show everything outright */
+  [data-reveal], .ticks li, .steps li, .notes .note,
+  .ide-side, .ide-editor, .ide-term { opacity: 1 !important; transform: none !important; }
+  .ide-editor .ln { width: 60% !important; }
+  .progress { display: none; }
+</style></noscript>
+</head>
+<body>
+
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+
+<div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top">
+      <img src="../assets/img/logo.webp" alt="" width="28" height="28">
+      <span>Dex</span>
+    </a>
+    <nav class="nav-links" aria-label="섹션">
+      <a href="#features">기능</a>
+      <a href="#machines">머신</a>
+      <a href="#agents">에이전트</a>
+      <a href="#start">시작하기</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <a href="../" hreflang="en">EN</a>
+      <a href="../ko/" class="is-on" aria-current="page" hreflang="ko">한</a>
+      <a href="../bn/" hreflang="bn">বাং</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ───────────────────────── hero ───────────────────────── -->
+<section class="hero" id="top">
+  <div class="glow" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow" data-reveal style="--i:0"><span class="dot"></span> 개인 프로젝트 · 개발 중</p>
+      <h1 data-reveal style="--i:1"><span class="accent">안드로이드</span>를 위한<br>코딩 환경.</h1>
+      <p class="lede" data-reveal style="--i:2">
+        터미널, 파일, Git, GitHub 풀 리퀘스트, 그리고 원하는 코딩 에이전트.
+        휴대폰에서 바로 돌리거나, SSH로 연결한 내 컴퓨터에서 돌립니다.
+      </p>
+      <p class="sub" data-reveal style="--i:3">
+        엄지 하나로 쓰도록 만들었습니다. 탭은 맨 아래에, 각 탭에서 열어 둔 것은 그 위 띠에,
+        지금 작업 중인 머신은 맨 위 칩에 있습니다.
+      </p>
+      <div class="cta" data-reveal style="--i:4">
+        <a class="btn btn-primary" href="#features">기능 보기</a>
+        <a class="btn" href="#start">직접 빌드하기</a>
+      </div>
+    </div>
+
+    <div class="hero-shot" data-reveal style="--i:3">
+      <div class="phone float" id="heroPhone">
+        <img src="../assets/img/terminal.webp" alt="휴대폰에서 실행 중인 Dex 터미널. 환영 메시지와 하단 탭 바가 보입니다." width="1080" height="2340" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── showcase ───────────────────────── -->
+<section class="showcase" id="features">
+  <div class="wrap">
+    <div class="show-head" data-reveal>
+      <h2 class="section-title sm">탭 네 개, 엄지 하나</h2>
+      <p class="show-sub">모든 것이 엄지가 이미 놓여 있는 아래쪽 바 뒤에 있습니다.</p>
+    </div>
+
+    <div class="show-grid" data-reveal style="--i:1">
+      <div class="phone phone-lg">
+        <div class="screen">
+          <div class="track" id="track">
+            <img src="../assets/img/terminal.webp" alt="Dex의 터미널 탭." width="1080" height="2340" loading="eager">
+            <img src="../assets/img/files.webp" alt="항목마다 Git 상태가 표시된 Dex 파일 트리." width="1080" height="2340" loading="eager">
+            <img src="../assets/img/agent.webp" alt="Dex 안에서 주고받은 코딩 에이전트 대화." width="1080" height="2340" loading="eager">
+            <img src="../assets/img/git.webp" alt="변경 사항과 풀 리퀘스트가 보이는 Git 탭." width="1080" height="2340" loading="eager">
+          </div>
+        </div>
+      </div>
+
+      <div class="show-text">
+        <div id="panels">
+          <article class="panel is-on" data-panel="terminal">
+            <h3>터미널</h3>
+            <ul>
+              <li>머신마다 터미널을 여러 개 열고, 탭 위 띠에서 바꿔 가며 씁니다.</li>
+              <li>키보드 위에 <kbd>ESC</kbd>, <kbd>CTRL</kbd>, <kbd>ALT</kbd>와 방향키를 모아 둔 추가 키 바가 있습니다.</li>
+              <li>키보드는 터미널을 눌렀을 때만 올라오므로, 탭을 옮겨도 튀어나오지 않습니다.</li>
+              <li>터미널은 백그라운드에서도 계속 돌아갑니다. 알림이 wake lock을 잡아 두면 화면이 꺼져도 긴 작업이 이어집니다.</li>
+            </ul>
+          </article>
+
+          <article class="panel" data-panel="files">
+            <h3>파일</h3>
+            <ul>
+              <li>작업 폴더를 트리로 보여 주고, 파일과 폴더마다 Git 상태를 표시합니다. 변경됨, 추가됨, 추적되지 않음.</li>
+              <li>텍스트는 문법 강조, 줄 번호, 줄 바꿈, 실행 취소와 다시 실행을 갖춘 편집기에서 열립니다.</li>
+              <li>이미지, 동영상, 오디오, PDF는 각각 전용 뷰어로 열립니다.</li>
+              <li>SSH 호스트에서는 진행률을 보면서 올리고 내려받습니다.</li>
+            </ul>
+          </article>
+
+          <article class="panel" data-panel="claude">
+            <h3>코딩 에이전트</h3>
+            <ul>
+              <li>원하는 코딩 에이전트와 대화합니다. Claude Code나 Codex가 작업 공간이 있는 머신에서 돌아갑니다.</li>
+              <li>모델과 추론 강도, 권한 모드를 고릅니다. 수정할 때마다 묻게 할 수도, 확인을 아예 건너뛰게 할 수도 있습니다.</li>
+              <li>대화 안에서 글자를 찾고, 지난 대화를 검색합니다.</li>
+              <li>에이전트가 언급한 파일을 누르면 열리고, 뒤로 가면 다시 대화로 돌아옵니다.</li>
+              <li>다른 곳에 있는 동안 에이전트가 답하거나 권한을 물으면 알림이 옵니다.</li>
+            </ul>
+          </article>
+
+          <article class="panel" data-panel="git">
+            <h3>Git과 풀 리퀘스트</h3>
+            <ul>
+              <li>저장소의 변경 사항을 파일별 diff와 함께 봅니다. 스테이지, 해제, 되돌리기, 커밋, 푸시, 풀.</li>
+              <li>브랜치를 옮기고 새로 만듭니다.</li>
+              <li>작업 중인 저장소의 GitHub 풀 리퀘스트를 필터와 함께 봅니다. 읽고, 리뷰하고, 머지하고, 새로 엽니다.</li>
+              <li>Git은 휴대폰이 아니라 작업 공간이 있는 머신에서 돌아갑니다.</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="hint">탭을 차례로 보여 주는 중입니다. 하나를 누르면 멈춥니다.</p>
+      </div>
+    </div>
+
+    <!-- the app's own bottom bar, as the control -->
+    <div class="tabbar" data-reveal style="--i:2" role="tablist" aria-label="기능 탭">
+      <button class="tab is-on" role="tab" aria-selected="true" data-tab="terminal">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l6 6-6 6"/><path d="M13 18h7"/></svg>
+        <span>터미널</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="files">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        <span>파일</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="claude">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.9l7.3 4.2v8.4L12 19.7 4.7 15.5V7.1z"/><path d="M12 8.5l1.1 2.4 2.4 1.1-2.4 1.1L12 15.5l-1.1-2.4L8.5 12l2.4-1.1z"/></svg>
+        <span>에이전트</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="git">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="6" r="2.2"/><circle cx="7" cy="18" r="2.2"/><circle cx="17" cy="9" r="2.2"/><path d="M7 8.2v7.6M17 11.2c0 3-4 2.6-7 4"/></svg>
+        <span>Git</span>
+        <i class="bar" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── machines ───────────────────────── -->
+<section class="machines" id="machines">
+  <div class="wrap">
+    <div class="split">
+      <div data-reveal>
+        <h2 class="section-title">주머니 속에서 쓰는 내 머신들</h2>
+        <p class="section-lede">
+          <code>~/.ssh/config</code>에 적어 둔 호스트가 작업 공간으로 열립니다. 휴대폰과 여러
+          SSH 호스트가 동시에 연결된 채로 있고, 맨 위 칩에서 서로 오갑니다.
+        </p>
+        <ul class="ticks">
+          <li>호스트마다 SSH 연결을 하나만 공유하므로, 파일과 Git, 에이전트가 두 번 로그인하라고 하지 않습니다.</li>
+          <li>앱 안에서 SSH 키를 만들고 관리합니다.</li>
+          <li>파일을 열고 명령을 실행하는 명령 팔레트가 있습니다.</li>
+          <li>위로 쓸어올리면 모든 탭에서 열려 있는 것을 한눈에 보여 주는 전환 화면이 나옵니다.</li>
+        </ul>
+      </div>
+
+      <figure class="wires" data-reveal style="--i:1" aria-label="휴대폰 한 대가 SSH로 여러 머신에 연결된 그림.">
+        <div class="wire-node wire-phone">
+          <span class="wire-ic">▣</span>
+          <b>이 휴대폰</b>
+          <small>휴대폰 안의 리눅스</small>
+        </div>
+        <div class="wire-rail" aria-hidden="true"><i class="spark"></i></div>
+        <div class="wire-hosts">
+          <div class="wire-node" style="--h:0"><span class="wire-ic">⬡</span><b>workstation</b><small>SSH 연결 하나</small></div>
+          <div class="wire-node" style="--h:1"><span class="wire-ic">⬡</span><b>gpu-box</b><small>SSH 연결 하나</small></div>
+          <div class="wire-node" style="--h:2"><span class="wire-ic">⬡</span><b>server</b><small>SSH 연결 하나</small></div>
+        </div>
+        <figcaption>파일, Git, 풀 리퀘스트, 에이전트 모두 작업 공간이 있는 머신에서 돌아갑니다.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── agents ───────────────────────── -->
+<section class="agents" id="agents">
+  <div class="wrap">
+    <div class="split">
+      <div data-reveal>
+        <h2 class="section-title">원하는 에이전트를, 쓰던 머신 그대로</h2>
+        <p class="section-lede">
+          Claude Code나 Codex가 작업 공간이 있는 머신에서 돌아가고, 손에 든 휴대폰으로 거기에
+          닿습니다. 새 대화를 열면 어떤 에이전트를 쓸지 묻고, 없으면 설치해 줍니다.
+        </p>
+        <ul class="ticks">
+          <li>대화마다 에이전트와 모델, 추론 강도, 권한 모드를 따로 둡니다.</li>
+          <li>모든 대화가 최신순 한 목록에 모이고, 에이전트가 표시됩니다.</li>
+          <li>에이전트가 일을 마치거나 물어볼 게 생기면, 어디에 있든 바로 알림이 옵니다.</li>
+          <li>아직 보지 않은 소식은 탭에 숫자로 쌓입니다. 누르면 그 대화가 열립니다.</li>
+        </ul>
+      </div>
+
+      <figure class="notes" data-reveal style="--i:1" aria-label="에이전트가 보낸 알림이 휴대폰에 도착하는 모습.">
+        <div class="note" style="--n:0">
+          <span class="note-ic" aria-hidden="true">◆</span>
+          <div class="note-txt">
+            <b>gpu-box · Claude Code</b>
+            <small>리팩터링을 마쳤습니다. 새 소식 3건.</small>
+          </div>
+        </div>
+        <div class="note" style="--n:1">
+          <span class="note-ic" aria-hidden="true">◆</span>
+          <div class="note-txt">
+            <b>workstation · Codex</b>
+            <small>파일을 쓰려면 승인이 필요합니다.</small>
+          </div>
+        </div>
+        <div class="note" style="--n:2">
+          <span class="note-ic" aria-hidden="true">◆</span>
+          <div class="note-txt">
+            <b>server · Claude Code</b>
+            <small>질문을 보냈습니다.</small>
+          </div>
+        </div>
+        <figcaption>작업은 시작한 자리에서 계속되고, 휴대폰은 그 소식만 전합니다.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── wide screens ───────────────────────── -->
+<section class="wide">
+  <div class="wrap">
+    <div class="band" data-reveal>
+      <div>
+        <h2 class="section-title sm">휴대폰만이 아닙니다</h2>
+        <p class="section-lede">
+          태블릿이나 더 큰 화면에서는 Dex가 데스크톱 IDE처럼 펼쳐집니다. 작업 옆에 파일 트리가,
+          그 아래에 터미널이 놓입니다.
+        </p>
+      </div>
+      <div class="band-art" aria-hidden="true">
+        <div class="ide">
+          <div class="ide-side"></div>
+          <div class="ide-main">
+            <div class="ide-editor">
+              <i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i>
+            </div>
+            <div class="ide-term"><i class="caret"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── get started ───────────────────────── -->
+<section class="start" id="start">
+  <div class="wrap">
+    <h2 class="section-title" data-reveal>시작하기</h2>
+
+    <ol class="steps" data-reveal style="--i:1">
+      <li>
+        <h3>APK 설치</h3>
+        <p>Dex는 64비트 ARM 휴대폰에서 안드로이드 7 이상이 필요합니다. 자체 앱 아이디 <code>com.dex</code>로 설치되므로, 이미 깔려 있는 앱과 나란히 둘 수 있습니다.</p>
+      </li>
+      <li>
+        <h3>앱 열기</h3>
+        <p>처음 켜면 작은 리눅스 시스템을 풀고 둘러보기를 보여 줍니다. 이 둘러보기는 나중에 작업 공간 시트에서 다시 볼 수 있습니다.</p>
+      </li>
+      <li>
+        <h3>내 머신 추가</h3>
+        <p>호스트를 <code>~/.ssh/config</code>에 적거나, 작업 공간 칩에서 <em>SSH 호스트 추가 및 편집</em>을 씁니다. 호스트를 누르고 열린 터미널에서 한 번 로그인하면, 파일과 Git, 에이전트가 그 머신으로 따라갑니다.</p>
+      </li>
+    </ol>
+
+    <div class="build" data-reveal style="--i:2">
+      <h3>소스에서 빌드하기</h3>
+      <p>Dex는 안드로이드 스튜디오에 들어 있는 JDK로 빌드합니다.</p>
+      <pre><code><span class="c">export</span> JAVA_HOME=<span class="s">"/Applications/Android Studio.app/Contents/jbr/Contents/Home"</span>
+./gradlew :app:assembleDebug</code></pre>
+      <p class="muted">APK는 <code>app/build/outputs/apk/debug/</code>에 생깁니다.</p>
+    </div>
+
+    <p class="note" data-reveal style="--i:3">
+      Dex는 개인 프로젝트이고 앱 저장소는 아직 비공개라서, 공개된 내려받기 링크는 없습니다.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand"><img src="../assets/img/logo.webp" alt="" width="22" height="22"> Dex</p>
+      <p class="muted"><a href="https://minhaj1403.github.io">Minhajur Rahman Chowdhury Mahim</a>이 만들었습니다.</p>
+    </div>
+    <p class="muted foot-legal">
+      Dex는 오픈소스 구성 요소를 바탕으로 만들었습니다. 라이선스는 앱의 설정, 오픈소스 라이선스에
+      정리되어 있습니다.
+    </p>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>
