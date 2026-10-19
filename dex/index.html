@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dex: A Coding Environment for Android</title>
+<title>Dex: A Coding Environment for Your Phone</title>
 
-<meta name="description" content="Dex is a coding environment for Android phones. Terminals, files, Git, GitHub pull requests and the coding agent of your choice, on the phone or on your own machines over SSH.">
+<meta name="description" content="Dex is a coding environment for Android and iOS. Terminals, files, Git, GitHub pull requests and the coding agent of your choice, on the phone or on your own machines over SSH.">
 <meta name="author" content="Minhajur Rahman Chowdhury Mahim">
 <meta name="theme-color" content="#07080a">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dex: A Coding Environment for Android">
+<meta property="og:title" content="Dex: A Coding Environment for Your Phone">
 <meta property="og:description" content="Terminals, files, Git, GitHub pull requests and the coding agent of your choice, on the phone or on your own machines over SSH.">
 <meta property="og:image" content="assets/img/logo.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -45,8 +45,10 @@
     </a>
     <nav class="nav-links" aria-label="Sections">
       <a href="#features">What it does</a>
+      <a href="#platforms">Android &amp; iOS</a>
       <a href="#machines">Machines</a>
       <a href="#agents">Agents</a>
+      <a href="#tablets">Tablets &amp; iPad</a>
       <a href="#start">Get started</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
@@ -64,8 +66,8 @@
   <div class="glow" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <p class="eyebrow" data-reveal style="--i:0"><span class="dot"></span> Personal project · in development</p>
-      <h1 data-reveal style="--i:1">A coding environment<br>for <span class="accent">Android</span>.</h1>
+      <p class="eyebrow" data-reveal style="--i:0"><svg class="eb-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg> Android <span class="eb-sep">·</span> <svg class="eb-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg> iPhone · iPad</p>
+      <h1 data-reveal style="--i:1">A coding environment<br>for your <span class="accent">phone</span>.</h1>
       <p class="lede" data-reveal style="--i:2">
         Terminals, files, Git, GitHub pull requests and the coding agent of your choice,
         running on the phone itself or on your own computers over SSH.
@@ -81,8 +83,27 @@
     </div>
 
     <div class="hero-shot" data-reveal style="--i:3">
-      <div class="phone float" id="heroPhone">
-        <img src="assets/img/terminal.webp" alt="The Dex terminal on a phone, showing the welcome message and the bottom tab bar." width="1080" height="2340" loading="eager">
+      <div class="phone" id="heroPhone">
+        <div class="screen">
+          <div class="track track-n" id="heroTrack" style="--n:7">
+            <img src="assets/img/terminal.webp" alt="The Dex terminal on a phone, connected to a Mac over SSH." width="1080" height="2340" loading="eager">
+            <img src="assets/img/files.webp" alt="The file tree of a project on the Mac, with Git status." width="1080" height="2340" loading="eager">
+            <img src="assets/img/hero-history.webp" alt="Past agent conversations on the Mac." width="1080" height="2340" loading="eager">
+            <img src="assets/img/hero-new-chat.webp" alt="Starting a new chat: Claude Code or Codex." width="1080" height="2340" loading="eager">
+            <img src="assets/img/agent.webp" alt="A chat with Codex on the Mac." width="1080" height="2340" loading="eager">
+            <img src="assets/img/hero-history-codex.webp" alt="The new Codex chat at the top of the conversations." width="1080" height="2340" loading="eager">
+            <img src="assets/img/git.webp" alt="The Git tab, with changes and pull requests." width="1080" height="2340" loading="eager">
+          </div>
+        </div>
+      </div>
+      <div class="dots" id="heroDots" role="tablist" aria-label="Screens">
+        <button class="dot-btn is-on" role="tab" aria-selected="true" aria-label="Screen 1: The Dex terminal on a phone, connected to a Mac over SSH."></button>
+        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 2: The file tree of a project on the Mac, with Git status."></button>
+        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 3: Past agent conversations on the Mac."></button>
+        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 4: Starting a new chat: Claude Code or Codex."></button>
+        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 5: A chat with Codex on the Mac."></button>
+        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 6: The new Codex chat at the top of the conversations."></button>
+        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 7: The Git tab, with changes and pull requests."></button>
       </div>
     </div>
   </div>
@@ -102,7 +123,7 @@
           <div class="track" id="track">
             <img src="assets/img/terminal.webp" alt="The Dex terminal tab." width="1080" height="2340" loading="eager">
             <img src="assets/img/files.webp" alt="The Dex file tree, with Git status on each entry." width="1080" height="2340" loading="eager">
-            <img src="assets/img/agent.webp" alt="Coding agent conversations inside Dex." width="1080" height="2340" loading="eager">
+            <img src="assets/img/agent.webp" alt="A chat with Codex on a Mac, inside Dex." width="1080" height="2340" loading="eager">
             <img src="assets/img/git.webp" alt="The Git tab, with changes and pull requests." width="1080" height="2340" loading="eager">
           </div>
         </div>
@@ -116,7 +137,7 @@
               <li>Several terminals per machine, switched from the strip above the tabs.</li>
               <li>An extra keys toolbar above the keyboard, with <kbd>ESC</kbd>, <kbd>CTRL</kbd>, <kbd>ALT</kbd> and the arrow keys.</li>
               <li>The keyboard opens only when you tap the terminal, so switching tabs doesn't pop it up.</li>
-              <li>Terminals keep running in the background. The notification can hold a wake lock, so long jobs survive the screen going off.</li>
+              <li>A Linux system on the phone itself: install Python, Git, Node.js and more with one command.</li>
             </ul>
           </article>
 
@@ -125,8 +146,8 @@
             <ul>
               <li>A tree of the workspace folder with Git status on every file and folder: changed, added, untracked.</li>
               <li>Text opens in an editor with syntax highlighting, line numbers, wrapping, undo and redo.</li>
-              <li>Images, video, audio and PDFs open in their own viewers.</li>
-              <li>On an SSH host, upload and download with progress.</li>
+              <li>Markdown preview, and viewers for images, video, audio and PDFs.</li>
+              <li>New, rename, copy, cut and paste, with undo. Upload and download on SSH hosts.</li>
             </ul>
           </article>
 
@@ -182,6 +203,26 @@
   </div>
 </section>
 
+<!-- ───────────────────────── platforms ───────────────────────── -->
+<section class="platforms" id="platforms">
+  <div class="wrap">
+    <h2 class="section-title" data-reveal>Android and iOS</h2>
+    <p class="section-lede" data-reveal style="--i:1">The same tabs and the same machines, on either phone.</p>
+    <div class="plats" data-reveal style="--i:2">
+      <article class="plat">
+        <h3><svg class="plat-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></svg>Android</h3>
+        <p>A full Linux system on your phone. Install tools like Python, Git and Node.js with one command.</p>
+        <small>Android 7 or later. Phones, tablets and Samsung DeX.</small>
+      </article>
+      <article class="plat">
+        <h3><svg class="plat-logo" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>iPhone and iPad</h3>
+        <p>Made for iPhone and iPad. Your machines and agents work just like on Android, with a Linux system on the device too.</p>
+        <small>iOS 18 or later.</small>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ───────────────────────── machines ───────────────────────── -->
 <section class="machines" id="machines">
   <div class="wrap">
@@ -195,9 +236,9 @@
         </p>
         <ul class="ticks">
           <li>One shared SSH connection per host, so files, Git and the agent never ask you to log in twice.</li>
-          <li>Create and manage SSH keys inside the app.</li>
-          <li>A command palette to open files and run commands.</li>
-          <li>A switcher showing everything open across every tab, reached by swiping up.</li>
+          <li>Terminals and agent chats keep running on the host when the connection drops, and open on your other devices too.</li>
+          <li>Saved passwords, and SSH keys made in the app, behind your fingerprint.</li>
+          <li>A command palette, and a switcher for everything open across every tab.</li>
         </ul>
       </div>
 
@@ -267,25 +308,42 @@
 </section>
 
 <!-- ───────────────────────── wide screens ───────────────────────── -->
-<section class="wide">
+<section class="wide" id="tablets">
   <div class="wrap">
-    <div class="band" data-reveal>
-      <div>
-        <h2 class="section-title sm">Not only phones</h2>
+    <div class="split">
+      <div data-reveal>
+        <h2 class="section-title">Not only phones</h2>
         <p class="section-lede">
-          On tablets and larger screens, Dex lays itself out like a desktop IDE, with the
-          file tree beside your work and the terminal below it.
+          On tablets, Samsung DeX and the iPad, Dex spreads out like a desktop IDE: files, Git
+          or agent chats in a side panel, with your work beside them.
         </p>
       </div>
-      <div class="band-art" aria-hidden="true">
-        <div class="ide">
-          <div class="ide-side"></div>
-          <div class="ide-main">
-            <div class="ide-editor">
-              <i class="ln"></i><i class="ln"></i><i class="ln"></i><i class="ln"></i>
+      <div class="band-art" data-reveal style="--i:1">
+        <div class="tablet">
+          <div class="screen">
+            <div class="track track-3" id="tabletTrack">
+              <img src="assets/img/tab-files.webp" alt="Dex on an iPad: the iPad's own files, with one open in the editor." width="1600" height="1112" loading="lazy">
+              <img src="assets/img/tab-agent.webp" alt="Dex on an iPad: agent conversations on a Mac, beside its terminal." width="1600" height="1112" loading="lazy">
+              <img src="assets/img/tab-git.webp" alt="Dex on an iPad: the Git tab, with a change ready to commit." width="1600" height="1112" loading="lazy">
             </div>
-            <div class="ide-term"><i class="caret"></i></div>
           </div>
+        </div>
+        <div class="tabbar tabbar-3" id="tabletBar" role="tablist" aria-label="iPad screens">
+          <button class="tab is-on" role="tab" aria-selected="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            <span>Files</span>
+            <i class="bar" aria-hidden="true"></i>
+          </button>
+          <button class="tab" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.9l7.3 4.2v8.4L12 19.7 4.7 15.5V7.1z"/><path d="M12 8.5l1.1 2.4 2.4 1.1-2.4 1.1L12 15.5l-1.1-2.4L8.5 12l2.4-1.1z"/></svg>
+            <span>Agent</span>
+            <i class="bar" aria-hidden="true"></i>
+          </button>
+          <button class="tab" role="tab" aria-selected="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="6" r="2.2"/><circle cx="7" cy="18" r="2.2"/><circle cx="17" cy="9" r="2.2"/><path d="M7 8.2v7.6M17 11.2c0 3-4 2.6-7 4"/></svg>
+            <span>Git</span>
+            <i class="bar" aria-hidden="true"></i>
+          </button>
         </div>
       </div>
     </div>
@@ -299,16 +357,16 @@
 
     <ol class="steps" data-reveal style="--i:1">
       <li>
-        <h3>Install the APK</h3>
-        <p>Dex needs Android 7 or later on a 64-bit ARM phone. It installs under its own app id, <code>com.dex</code>, so it sits alongside whatever is already on the phone.</p>
+        <h3>Install it</h3>
+        <p>Dex runs on Android 7 or later, and on iPhone and iPad with iOS 18 or later.</p>
       </li>
       <li>
         <h3>Open it</h3>
-        <p>The first start unpacks a small Linux system and walks you through a tour, which you can watch again later from the workspace sheet.</p>
+        <p>The first start sets up a small Linux system on the device and walks you through a short tour.</p>
       </li>
       <li>
         <h3>Add your machines</h3>
-        <p>Put a host in <code>~/.ssh/config</code>, or use <em>Add or edit SSH hosts</em> from the workspace chip. Tap the host, log in once in the terminal that opens, and files, Git and the agent follow you there.</p>
+        <p>Use <em>Add SSH hosts</em> from the workspace chip, or put a host in <code>~/.ssh/config</code>. Tap it, log in once, and files, Git and the agent follow you there.</p>
       </li>
     </ol>
 
@@ -317,11 +375,11 @@
       <p>Dex builds with the JDK that ships inside Android Studio.</p>
       <pre><code><span class="c">export</span> JAVA_HOME=<span class="s">"/Applications/Android Studio.app/Contents/jbr/Contents/Home"</span>
 ./gradlew :app:assembleDebug</code></pre>
-      <p class="muted">APKs land in <code>app/build/outputs/apk/debug/</code>.</p>
+      <p class="muted">APKs land in <code>app/build/outputs/apk/debug/</code>. The iOS app builds in Xcode from its own project.</p>
     </div>
 
     <p class="note" data-reveal style="--i:3">
-      Dex is a personal project and the app repository is private for now, so there's no
+      Dex is a personal project and its repositories are private for now, so there's no
       public download yet.
     </p>
   </div>
@@ -337,7 +395,8 @@
     </div>
     <p class="muted foot-legal">
       Dex is built on open-source components. Their licenses are listed inside the app,
-      under Settings, Open-source licenses.
+      under Settings, Open-source licenses. Android is a trademark of Google LLC. Apple,
+      iPhone and iPad are trademarks of Apple Inc.
     </p>
   </div>
 </footer>

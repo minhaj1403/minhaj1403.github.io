@@ -499,26 +499,13 @@ pre .s { color: #8fd98f; }
 .steps[data-reveal].in li:nth-child(3), .ticks.in li:nth-child(3) { transition-delay: .26s; }
 .ticks.in li:nth-child(4) { transition-delay: .36s; }
 
-/* ── hero: drifting glow, floating phone ── */
+/* ── hero: drifting glow ── */
 .glow { animation: drift 19s ease-in-out infinite alternate; }
 @keyframes drift {
   from { transform: translate3d(0,0,0)      scale(1);    opacity: .9; }
   to   { transform: translate3d(3%,2.5%,0)  scale(1.09); opacity: 1; }
 }
 
-.float { animation: bob 7.5s ease-in-out infinite; }
-@keyframes bob {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-11px); }
-}
-
-/* the hero phone leans very slightly toward the pointer */
-.hero-shot { perspective: 1100px; }
-#heroPhone {
-  transform-style: preserve-3d;
-  transition: transform .4s cubic-bezier(.22,.7,.3,1);
-}
-#heroPhone.tilting { animation: none; transition: transform .18s ease-out; }
 
 /* ── machines: a packet runs down the rail, hosts answer ── */
 .wire-rail { position: relative; overflow: visible; }
@@ -620,7 +607,7 @@ pre .s { color: #8fd98f; }
     opacity: 1 !important; transform: none !important;
   }
   .ide-editor .ln { width: 60% !important; }
-  .glow, .float, .spark, .caret,
+  .glow, .spark, .caret,
   .wires.in .wire-hosts .wire-node,
   .wires.in .wire-phone::after { animation: none !important; }
   .wire-rail .spark { opacity: 0 !important; }
@@ -770,4 +757,83 @@ body { overflow-x: clip; }
   .tab { font-size: .66rem; gap: 4px; padding: 9px 2px 7px; }
   .tab svg { width: 18px; height: 18px; }
   .tabbar { padding: 6px; border-radius: 15px; }
+}
+
+/* ───────────── platforms ───────────── */
+.platforms { padding: clamp(56px, 8vw, 96px) 0; border-top: 1px solid var(--line); }
+.platforms .section-lede { margin-bottom: 28px; }
+
+.plats { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.plat {
+  padding: 24px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: var(--r);
+}
+.plat h3 { margin: 0 0 8px; font-size: 1.1rem; font-weight: 600; letter-spacing: -.015em; }
+.plat p { margin: 0 0 12px; color: var(--ink-2); font-size: .95rem; }
+.plat small { color: var(--ink-3); font-family: var(--mono); font-size: .76rem; }
+
+@media (max-width: 700px) {
+  .platforms { padding: 46px 0; }
+  .plats { grid-template-columns: 1fr; gap: 12px; }
+  .plat { padding: 18px; }
+}
+
+/* ───────────── platform logos ───────────── */
+.eb-logo { width: 13px; height: 13px; fill: var(--ink-2); flex: none; }
+.eb-sep { opacity: .6; }
+.plat h3 { display: flex; align-items: center; gap: 10px; }
+.plat-logo { width: 22px; height: 22px; fill: var(--ink); flex: none; }
+.plat:first-child .plat-logo { fill: #3ddc84; }
+
+/* ───────────── tablet: iPad screenshots, like the showcase ───────────── */
+/* a section like the others, with the iPad taking the wider side */
+.wide { padding: clamp(56px, 8vw, 96px) 0; border-top: 1px solid var(--line); }
+.wide .split { grid-template-columns: .8fr 1.2fr; }
+.wide .section-lede { margin-bottom: 0; }
+.tablet {
+  padding: 9px; border-radius: 22px;
+  border: 1px solid var(--line-2);
+  background: linear-gradient(170deg, #1a1f27, #0a0c10);
+  box-shadow: 0 30px 70px -30px rgba(0,0,0,.95), 0 0 90px -45px rgba(42,165,245,.4);
+  margin-bottom: 16px;
+}
+.tablet .screen { border-radius: 14px; }
+.track-3 { width: 300%; }
+.track-3 img { width: 33.3334%; flex: 0 0 33.3334%; }
+.tabbar-3 { grid-template-columns: repeat(3, 1fr); max-width: 330px; }
+.band-art .tabbar { margin: 0 auto; }
+
+@media (max-width: 920px) {
+  .wide .split { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .wide { padding: 46px 0; }
+  .tablet { padding: 6px; border-radius: 16px; margin-bottom: 12px; }
+  .tablet .screen { border-radius: 11px; }
+}
+
+/* ───────────── nav: six links stay on one line ───────────── */
+.nav-links a { white-space: nowrap; }
+@media (max-width: 1000px) { .nav-links { gap: 18px; } }
+@media (max-width: 860px) {
+  .nav-links { display: none; }
+  .lang { margin-left: auto; }
+}
+
+/* ───────────── hero: a slideshow of the app ───────────── */
+.track-n { width: calc(var(--n) * 100%); }
+.track-n img { width: calc(100% / var(--n)); flex: 0 0 calc(100% / var(--n)); }
+
+.dots { display: flex; justify-content: center; gap: 7px; margin-top: 18px; }
+.dot-btn {
+  width: 7px; height: 7px; padding: 0; border: 0; border-radius: 100px;
+  background: var(--line-2); cursor: pointer;
+  transition: width .3s cubic-bezier(.22,.7,.3,1), background .2s ease;
+}
+.dot-btn:hover { background: rgba(255,255,255,.3); }
+.dot-btn.is-on { width: 22px; background: var(--accent); }
+
+@media (max-width: 700px) {
+  .hero-shot .screen { border-radius: 19px; }
+  .dots { margin-top: 12px; }
 }
