@@ -3,7 +3,7 @@ layout: about
 title: About Me!
 permalink: /
 # subtitle: Undergraduate Student, <a href='https://www.kaist.ac.kr/en/'>KAIST</a>, Daejeon, Republic of Korea
-subtitle: Computer Science Graduate, <a href='https://www.kaist.ac.kr/en/'>KAIST</a>
+subtitle: AI Software R&D, <a href='https://www.k-ailab.com/'>K-AI Lab</a>
 
 profile:
   align: left
@@ -25,14 +25,16 @@ latest_posts:
   scrollable: # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
-Hi! I'm **Minhaj**, a Computer Science graduate from [KAIST](https://www.kaist.ac.kr/en/). I hail from **Bangladesh**, and currently study in **South Korea**.
+Hi! I'm **Minhaj**. I do AI Software R&D at **[K-AI Lab](https://www.k-ailab.com/)**, working on 3D space and odometry for industrial Physical AI applications.
 
-I worked on VLM reasoning capabilities at the [Machine Learning & Vision Lab (MLV)](http://mlv.kaist.ac.kr), advised by [Prof. Hyunwoo J. Kim](https://www.hyunwoojkim.com/people). Previously, I researched low-resource language processing in LLMs at the [U&I Lab](https://uilab.kr) under [Prof. Alice Oh](https://aliceoh9.github.io).
+I'm a Computer Science graduate from [KAIST](https://www.kaist.ac.kr/en/). I hail from **Bangladesh**, and I'm currently based in **South Korea**.
 
-My research interest lies at the intersection of NLP and Computer Vision, where I explore ways to enhance the capabilities of LLMs and MLLMs. I believe that achieving AGI requires systems that are multilingual, multicultural, and multimodal, which would be capable of understanding and reasoning across all means and demographies.
+I worked on VLM reasoning capabilities at the [Machine Learning & Vision Lab (MLV)](http://mlv.kaist.ac.kr), advised by [Prof. Hyunwoo J. Kim](https://www.hyunwoojkim.com/people). Previously, I researched the reasoning capabilities of LLMs in low-resource languages at the [U&I Lab](https://uilab.kr), led by [Prof. Alice Oh](https://aliceoh9.github.io).
 
 
 <!-- I also interned at UNIUNI Corp., contributing to AI development and communications, achieving a **CES 2025 Innovation Award** for our anomaly detection system in privacy-sensitive places. -->
+
+On the side I'm building **[Dex](https://minhaj1403.github.io/dex/)**, a coding environment for phones: terminals, files, Git and coding agents on Android and iOS, working on your own machines over SSH.
 
 Outside work, I enjoy playing guitar and cycling!
 
