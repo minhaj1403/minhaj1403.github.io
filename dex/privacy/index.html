@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dex: Privacy Policy</title>
+
+<meta name="description" content="The privacy policy of Dex for Android: Dex collects no personal data.">
+<meta name="author" content="Minhajur Rahman Chowdhury Mahim">
+<meta name="theme-color" content="#07080a">
+
+<link rel="icon" href="../assets/img/icon.png">
+<link rel="apple-touch-icon" href="../assets/img/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="../assets/css/styles.css">
+
+<style>
+  /* a page of reading: one narrow column */
+  .policy { max-width: 72ch; padding-block: 56px 72px; }
+  .policy h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); line-height: 1.15; letter-spacing: -.02em; margin: 0 0 8px; }
+  .policy .updated { color: var(--ink-3); margin: 0 0 32px; font-size: .92rem; }
+  .policy h2 { font-size: 1.25rem; letter-spacing: -.01em; margin: 40px 0 10px; }
+  .policy p, .policy li { color: var(--ink-2); }
+  .policy strong { color: var(--ink); font-weight: 600; }
+  .policy ul { padding-left: 1.2em; }
+  .policy li { margin: 6px 0; }
+  .policy code { font-size: .9em; color: var(--ink); background: var(--surface); padding: 1px 6px; border-radius: 6px; }
+  .policy .summary { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px 22px; }
+  .policy .summary p { margin: 0; color: var(--ink); }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../">
+      <img src="../assets/img/logo.webp" alt="" width="28" height="28">
+      <span>Dex</span>
+    </a>
+  </div>
+</header>
+
+<main id="main" class="wrap policy">
+
+<h1>Privacy Policy</h1>
+<p class="updated">Dex for Android · Last updated October 20, 2026</p>
+
+<div class="summary">
+  <p>
+    Dex collects no personal data. It has no account, no ads, no analytics and no crash
+    reporting, and its developer runs no server that receives anything from it. What you
+    make and save in Dex stays on your device, or goes only to the machines and services
+    you connect it to yourself.
+  </p>
+</div>
+
+<h2>Who this is from</h2>
+<p>
+  Dex is made by Minhajur Rahman Chowdhury Mahim ("I" below). This policy covers the Dex app
+  for Android (<code>com.dexide</code>), both the version on Google Play and the one on
+  GitHub.
+</p>
+
+<h2>What stays on your device</h2>
+<p>Everything Dex keeps is stored in its private storage on your device:</p>
+<ul>
+  <li>the files in Dex's home folder, the programs and packages you install, and your terminal sessions;</li>
+  <li>your settings, the list of SSH machines and folders you open, and your SSH keys;</li>
+  <li>SSH passwords you choose to save and your GitHub sign-in, encrypted with a key kept in
+      Android's Keystore.</li>
+</ul>
+<p>
+  None of it is sent to me. Dex turns off Android's app backup, so it is not copied to a
+  cloud backup either. Uninstalling Dex, or clearing its storage in Android's settings,
+  deletes all of it.
+</p>
+
+<h2>What Dex connects to, and when</h2>
+<p>Dex only connects to something when you use a feature that needs it:</p>
+<ul>
+  <li>
+    <strong>Your own machines over SSH.</strong> When you open a machine you added, Dex
+    connects to it and sends what you type, the files you upload and the commands that list
+    and show your files. To keep terminals and agent chats running, it installs a small
+    helper program, dex-server, in <code>~/.dex-server</code> on that machine. These are your
+    machines; nothing goes from them to me.
+  </li>
+  <li>
+    <strong>GitHub.</strong> If you sign in to GitHub to see and create pull requests, Dex
+    sends your token only to GitHub (<code>github.com</code> and <code>api.github.com</code>).
+    GitHub's own privacy statement applies to what you do there.
+  </li>
+  <li>
+    <strong>Package repositories.</strong> When you install or update packages with
+    <code>pkg</code> or <code>apt</code>, they are downloaded from the Termux project's package
+    repository and its mirrors, which are run by others and see your IP address, like any
+    website you visit.
+  </li>
+  <li>
+    <strong>Coding agents.</strong> Claude Code and Codex run on the machine you choose, as
+    their own programs, and talk to Anthropic and OpenAI under those companies' terms and
+    privacy policies. If you ask Dex to install one, it runs that program's official
+    installer on the machine. Dex shows your chats with them and doesn't send them anywhere
+    else. When you sign in to Claude Code through Dex, its sign-in token is kept on that
+    machine, in <code>~/.dex-server</code>.
+  </li>
+  <li>
+    <strong>Images in Markdown.</strong> When you preview a Markdown file that shows images
+    from the web, they are loaded from the addresses written in the file.
+  </li>
+  <li>
+    <strong>Links.</strong> Links you open go to your browser or another app you choose.
+  </li>
+</ul>
+<p>
+  Programs you run in Dex's terminal, like <code>git</code>, <code>curl</code> or
+  <code>npm</code>, connect wherever you tell them to. Dex doesn't watch or record what they
+  send.
+</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Network:</strong> for SSH, GitHub, packages and the programs you run.</li>
+  <li><strong>Notifications and a foreground service:</strong> to keep your terminals running
+      in the background and tell you when an agent finishes or needs you.</li>
+  <li><strong>Fingerprint, face or screen lock:</strong> to confirm it's you before showing
+      private things such as SSH keys. Android does the check; Dex never sees your
+      fingerprint or face.</li>
+  <li><strong>Storage:</strong> the version on Google Play reaches your device's files only
+      through Android's file picker, or with the storage permission on Android 10 and
+      earlier. The GitHub version can also ask for All files access, so programs in the
+      terminal can use your device's storage.</li>
+</ul>
+
+<h2>Moving over from the old Dex</h2>
+<p>
+  If the earlier Dex (<code>com.dex</code>) is installed, Dex can bring your files and
+  settings over from it. The two apps exchange them directly on your device, and only
+  because both are signed with the same key; nothing leaves the device.
+</p>
+
+<h2>Children</h2>
+<p>Dex is a tool for software developers and is not directed at children under 13.</p>
+
+<h2>Changes</h2>
+<p>
+  If this policy changes, the new version will be posted on this page with a new date. If
+  Dex ever starts collecting data, this page will say so first, and the app will ask you
+  before it does.
+</p>
+
+<h2>Contact</h2>
+<p>
+  Questions about this policy or about Dex:
+  <a href="mailto:minhajurrahman1403@gmail.com">minhajurrahman1403@gmail.com</a>.
+</p>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand"><img src="../assets/img/logo.webp" alt="" width="22" height="22"> Dex</p>
+      <p class="muted">Built by <a href="https://minhaj1403.github.io">Minhajur Rahman Chowdhury Mahim</a>.</p>
+    </div>
+    <p class="muted foot-legal">
+      Android is a trademark of Google LLC. Claude Code is a product of Anthropic, and Codex
+      of OpenAI; Dex is not affiliated with either company.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
