@@ -699,14 +699,9 @@ body { overflow-x: clip; }
   .cta { gap: 10px; }
   .cta .btn { flex: 1 1 0; min-width: 0; min-height: 46px; padding: .7rem 1rem; }
 
-  /* the hero shows the top of the screen only, so the fold stays reachable */
-  .hero-shot .phone { max-width: 208px; padding: 6px; border-radius: 24px; }
-  .hero-shot .phone img {
-    height: 266px; object-fit: cover; object-position: top;
-    border-radius: 19px;
-    -webkit-mask-image: linear-gradient(#000 76%, transparent);
-            mask-image: linear-gradient(#000 76%, transparent);
-  }
+  /* the whole screen, like the phone of the showcase */
+  .hero-shot .phone { max-width: 196px; padding: 6px; border-radius: 24px; }
+  .hero-shot .phone img { border-radius: 19px; }
 
   .section-title    { font-size: clamp(1.45rem, 5.6vw, 1.8rem); }
   .section-title.sm { font-size: clamp(1.3rem, 5vw, 1.6rem); }
@@ -751,8 +746,7 @@ body { overflow-x: clip; }
 }
 
 @media (max-width: 420px) {
-  .hero-shot .phone { max-width: 186px; }
-  .hero-shot .phone img { height: 238px; }
+  .hero-shot .phone { max-width: 178px; }
   .show-grid .phone-lg { max-width: 178px; }
   .tab { font-size: .66rem; gap: 4px; padding: 9px 2px 7px; }
   .tab svg { width: 18px; height: 18px; }
