@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dex: Privacy Policy</title>
 
-<meta name="description" content="The privacy policy of Dex for Android: Dex collects no personal data.">
+<meta name="description" content="The privacy policy of Dex, on Android, iPhone and iPad: Dex collects no personal data.">
 <meta name="author" content="Minhajur Rahman Chowdhury Mahim">
 <meta name="theme-color" content="#07080a">
 
@@ -30,6 +30,7 @@
   .policy code { font-size: .9em; color: var(--ink); background: var(--surface); padding: 1px 6px; border-radius: 6px; }
   .policy .summary { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 18px 22px; }
   .policy .summary p { margin: 0; color: var(--ink); }
+  .policy h3 { font-size: 1.02rem; margin: 22px 0 6px; color: var(--ink); }
 </style>
 </head>
 <body>
@@ -48,7 +49,7 @@
 <main id="main" class="wrap policy">
 
 <h1>Privacy Policy</h1>
-<p class="updated">Dex for Android · Last updated October 20, 2026</p>
+<p class="updated">Last updated October 24, 2026</p>
 
 <div class="summary">
   <p>
@@ -61,23 +62,26 @@
 
 <h2>Who this is from</h2>
 <p>
-  Dex is made by Minhajur Rahman Chowdhury Mahim ("I" below). This policy covers the Dex app
-  for Android (<code>com.dexide</code>), both the version on Google Play and the one on
-  GitHub.
+  Dex is made by Minhajur Rahman Chowdhury Mahim ("I" below). This policy covers the Dex apps
+  for Android (<code>com.dexide</code>), both the version on Google Play and the one on GitHub,
+  and for iPhone and iPad.
 </p>
 
 <h2>What stays on your device</h2>
 <p>Everything Dex keeps is stored in its private storage on your device:</p>
 <ul>
-  <li>the files in Dex's home folder, the programs and packages you install, and your terminal sessions;</li>
   <li>your settings, the list of SSH machines and folders you open, and your SSH keys;</li>
-  <li>SSH passwords you choose to save and your GitHub sign-in, encrypted with a key kept in
-      Android's Keystore.</li>
+  <li>SSH passwords you choose to save and your GitHub sign-in, encrypted: on Android with a
+      key kept in Android's Keystore, on iPhone and iPad in the Keychain, for this device only;</li>
+  <li>on Android, also the files in Dex's home folder, the programs and packages you install,
+      and your terminal sessions.</li>
 </ul>
 <p>
-  None of it is sent to me. Dex turns off Android's app backup, so it is not copied to a
-  cloud backup either. Uninstalling Dex, or clearing its storage in Android's settings,
-  deletes all of it.
+  None of it is sent to me. On Android, Dex turns off Android's app backup, so it is not copied
+  to a cloud backup either. On iPhone and iPad, your settings and list of machines are part of
+  your device's iCloud or computer backup, like any app's, while keys, passwords and your
+  GitHub sign-in are not, as the Keychain keeps them on this device only. Uninstalling Dex, or
+  on Android clearing its storage, deletes all of it.
 </p>
 
 <h2>What Dex connects to, and when</h2>
@@ -96,7 +100,7 @@
     GitHub's own privacy statement applies to what you do there.
   </li>
   <li>
-    <strong>Package repositories.</strong> When you install or update packages with
+    <strong>Package repositories, on Android.</strong> When you install or update packages with
     <code>pkg</code> or <code>apt</code>, they are downloaded from the Termux project's package
     repository and its mirrors, which are run by others and see your IP address, like any
     website you visit.
@@ -110,20 +114,22 @@
     machine, in <code>~/.dex-server</code>.
   </li>
   <li>
-    <strong>Images in Markdown.</strong> When you preview a Markdown file that shows images
-    from the web, they are loaded from the addresses written in the file.
+    <strong>Images in Markdown, on Android.</strong> When you preview a Markdown file that
+    shows images from the web, they are loaded from the addresses written in the file.
   </li>
   <li>
-    <strong>Links.</strong> Links you open go to your browser or another app you choose.
+    <strong>Links.</strong> Links you open go to your browser or another app you choose, and
+    on iPhone and iPad sign-in pages may open in Safari's view inside Dex.
   </li>
 </ul>
 <p>
-  Programs you run in Dex's terminal, like <code>git</code>, <code>curl</code> or
+  Programs you run in Dex's terminals, like <code>git</code>, <code>curl</code> or
   <code>npm</code>, connect wherever you tell them to. Dex doesn't watch or record what they
   send.
 </p>
 
 <h2>Permissions</h2>
+<h3>On Android</h3>
 <ul>
   <li><strong>Network:</strong> for SSH, GitHub, packages and the programs you run.</li>
   <li><strong>Notifications and a foreground service:</strong> to keep your terminals running
@@ -136,8 +142,17 @@
       earlier. The GitHub version can also ask for All files access, so programs in the
       terminal can use your device's storage.</li>
 </ul>
+<h3>On iPhone and iPad</h3>
+<ul>
+  <li><strong>Local network:</strong> to reach machines on your own network over SSH.</li>
+  <li><strong>Notifications:</strong> to tell you when an agent finishes or needs you.</li>
+  <li><strong>Face ID or your passcode:</strong> to confirm it's you before showing your SSH
+      keys. iOS does the check; Dex never sees your face.</li>
+  <li><strong>Files:</strong> Dex reaches files on your device only through the files you pick
+      to upload or choose to save, with the Files app.</li>
+</ul>
 
-<h2>Moving over from the old Dex</h2>
+<h2>Moving over from the old Dex, on Android</h2>
 <p>
   If the earlier Dex (<code>com.dex</code>) is installed, Dex can bring your files and
   settings over from it. The two apps exchange them directly on your device, and only
@@ -169,8 +184,9 @@
       <p class="muted">Built by <a href="https://minhaj1403.github.io">Minhajur Rahman Chowdhury Mahim</a>.</p>
     </div>
     <p class="muted foot-legal">
-      Android is a trademark of Google LLC. Claude Code is a product of Anthropic, and Codex
-      of OpenAI; Dex is not affiliated with either company.
+      Android is a trademark of Google LLC. iPhone, iPad and Face ID are trademarks of Apple
+      Inc. Claude Code is a product of Anthropic, and Codex of OpenAI; Dex is not affiliated
+      with either company.
     </p>
   </div>
 </footer>
