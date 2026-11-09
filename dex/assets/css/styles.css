@@ -176,6 +176,17 @@ h1 {
 }
 .btn-primary:hover { background: #4fb6f8; border-color: #4fb6f8; }
 
+/* Apple's own badge artwork, shown as it is (no recolouring, no extra frame) */
+.store-badge {
+  display: inline-flex; align-items: center; flex: none;
+  border-radius: 8px; transition: transform .16s ease, opacity .16s ease;
+}
+.store-badge img { display: block; height: 48px; width: auto; }
+.store-badge:hover { transform: translateY(-1px); opacity: .92; }
+.store-badge-sm { margin-top: 16px; }
+.store-badge-sm img { height: 40px; }
+.stores { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+
 /* ───────────── phone frame ───────────── */
 .phone {
   position: relative;
@@ -375,6 +386,7 @@ section { position: relative; }
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
   counter-reset: s;
 }
+.steps-4 { grid-template-columns: repeat(2, 1fr); }
 .steps li {
   counter-increment: s;
   padding: 24px; background: var(--surface);
@@ -497,6 +509,7 @@ pre .s { color: #8fd98f; }
 .steps[data-reveal].in li:nth-child(1), .ticks.in li:nth-child(1) { transition-delay: .06s; }
 .steps[data-reveal].in li:nth-child(2), .ticks.in li:nth-child(2) { transition-delay: .16s; }
 .steps[data-reveal].in li:nth-child(3), .ticks.in li:nth-child(3) { transition-delay: .26s; }
+.steps[data-reveal].in li:nth-child(4) { transition-delay: .36s; }
 .ticks.in li:nth-child(4) { transition-delay: .36s; }
 
 /* ── hero: drifting glow ── */
