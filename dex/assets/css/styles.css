@@ -102,8 +102,8 @@ kbd {
 .nav-links { margin-left: auto; }
 .lang { margin-left: 4px; }
 .brand {
-  display: inline-flex; align-items: center; gap: 10px;
-  color: var(--ink); font-weight: 600; letter-spacing: -.01em; font-size: 1.05rem;
+  display: inline-flex; align-items: center; gap: 5px;
+  color: var(--ink); font-weight: 600; letter-spacing: -.02em; font-size: 1.32rem;
 }
 .brand:hover { text-decoration: none; }
 .brand img { border-radius: 7px; display: block; }
@@ -117,7 +117,7 @@ kbd {
 @media (max-width: 720px) { .nav-links { display: none; } }
 
 /* ───────────── hero ───────────── */
-.hero { position: relative; padding: clamp(56px, 9vw, 104px) 0 clamp(48px, 7vw, 88px); }
+.hero { position: relative; padding: clamp(48px, 5vw, 56px) 0 clamp(48px, 7vw, 88px); }
 
 .glow {
   position: absolute; inset: -20% -10% auto -10%; height: 620px;
@@ -201,8 +201,8 @@ h1 {
   display: block; width: 100%; height: auto;
   border-radius: 23px; background: #000;
 }
-.hero-shot .phone { max-width: 272px; }
-.phone-lg { max-width: clamp(168px, 23vh, 248px); }
+/* as big as fits with its tabs and caption under the bar, up to 320px */
+.hero-shot .phone { max-width: clamp(272px, 46vh - 97px, 320px); max-width: clamp(272px, 46svh - 97px, 320px); }
 
 /* ───────────── section furniture ───────────── */
 section { position: relative; }
@@ -219,23 +219,6 @@ section { position: relative; }
   max-width: 58ch; font-size: 1.02rem;
 }
 
-/* ───────────── showcase ───────────── */
-.showcase {
-  padding: clamp(32px, 4.5vw, 56px) 0 clamp(28px, 4vw, 44px);
-  border-top: 1px solid var(--line);
-  background: linear-gradient(180deg, var(--bg-2), var(--bg) 70%);
-}
-
-.show-head { margin-bottom: clamp(18px, 2.4vw, 30px); }
-.show-head .section-title { margin-bottom: 6px; }
-.show-sub { margin: 0; color: var(--ink-2); font-size: .95rem; max-width: 60ch; }
-
-.show-grid {
-  display: grid; grid-template-columns: auto 1fr;
-  gap: clamp(28px, 4.5vw, 56px); align-items: center;
-  margin-bottom: clamp(20px, 2.6vw, 30px);
-}
-
 /* the screen is a window; the track slides behind it */
 .screen { overflow: hidden; border-radius: 23px; background: #000; }
 .track {
@@ -246,30 +229,6 @@ section { position: relative; }
 .track img {
   width: 25%; flex: 0 0 25%;
   display: block; height: auto; border-radius: 0;
-}
-
-#panels { position: relative; }
-.panel { display: none; }
-.panel.is-on { display: block; animation: rise .42s ease both; }
-@keyframes rise { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
-
-.panel h3 {
-  margin: 0 0 13px; font-size: 1.28rem; font-weight: 600; letter-spacing: -.02em;
-}
-.panel ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; }
-.panel li {
-  position: relative; padding-left: 24px;
-  color: var(--ink-2); font-size: .93rem; line-height: 1.52;
-}
-.panel li::before {
-  content: ""; position: absolute; left: 4px; top: .58em;
-  width: 6px; height: 6px; border-radius: 2px;
-  background: var(--accent); opacity: .65;
-}
-
-.hint {
-  margin: 18px 0 0; font-family: var(--mono);
-  font-size: .74rem; color: var(--ink-3);
 }
 
 /* the app's bottom bar, reused as the control */
@@ -404,7 +363,6 @@ section { position: relative; }
 /* ───────────── responsive ───────────── */
 @media (max-width: 920px) {
   .hero-in,
-  .show-grid,
   .split,
   .band { grid-template-columns: 1fr; }
 
@@ -412,9 +370,6 @@ section { position: relative; }
   .hero-copy { max-width: 38rem; }
   .lede, .sub { max-width: none; }
 
-  .show-grid { gap: 32px; justify-items: center; }
-  .show-grid .phone-lg { max-width: 250px; }
-  .show-text { width: 100%; }
 
   .foot-in { grid-template-columns: 1fr; }
   .foot-legal { justify-self: start; }
@@ -664,24 +619,14 @@ body { overflow-x: clip; }
   .cta { gap: 10px; }
   .cta .btn { flex: 1 1 0; min-width: 0; min-height: 46px; padding: .7rem 1rem; }
 
-  /* the whole screen, like the phone of the showcase */
-  .hero-shot .phone { max-width: 196px; padding: 6px; border-radius: 24px; }
+  /* the whole screen */
+  .hero-shot .phone { max-width: 236px; padding: 6px; border-radius: 26px; }
   .hero-shot .phone img { border-radius: 19px; }
 
   .section-title    { font-size: clamp(1.45rem, 5.6vw, 1.8rem); }
   .section-title.sm { font-size: clamp(1.3rem, 5vw, 1.6rem); }
   .section-lede     { font-size: .96rem; margin-bottom: 26px; }
 
-  .showcase { padding: 30px 0 26px; }
-  .show-head { margin-bottom: 16px; }
-  .show-sub { font-size: .9rem; }
-  .show-grid { gap: 22px; margin-bottom: 18px; }
-  .show-grid .phone-lg { max-width: 196px; padding: 6px; border-radius: 24px; }
-  .show-grid .screen { border-radius: 19px; }
-  .panel h3 { font-size: 1.1rem; margin-bottom: 10px; }
-  .panel li { font-size: .89rem; padding-left: 20px; }
-  .panel ul { gap: 7px; }
-  .hint { margin-top: 14px; font-size: .68rem; }
 
   .machines, .agents, .start { padding: 46px 0; }
   .wide { padding-bottom: 46px; }
@@ -702,14 +647,13 @@ body { overflow-x: clip; }
 }
 
 @media (max-width: 420px) {
-  .hero-shot .phone { max-width: 178px; }
-  .show-grid .phone-lg { max-width: 178px; }
+  .hero-shot .phone { max-width: 216px; }
   .tab { font-size: .66rem; gap: 4px; padding: 9px 2px 7px; }
   .tab svg { width: 18px; height: 18px; }
   .tabbar { padding: 6px; border-radius: 15px; }
 }
 
-/* ───────────── tablet: iPad screenshots, like the showcase ───────────── */
+/* ───────────── tablet: iPad screenshots ───────────── */
 /* a section like the others, with the iPad taking the wider side */
 .wide { padding: clamp(56px, 8vw, 96px) 0; border-top: 1px solid var(--line); }
 .wide .split { grid-template-columns: .8fr 1.2fr; }
@@ -744,20 +688,55 @@ body { overflow-x: clip; }
   .lang { margin-left: auto; }
 }
 
-/* ───────────── hero: a slideshow of the app ───────────── */
-.track-n { width: calc(var(--n) * 100%); }
-.track-n img { width: calc(100% / var(--n)); flex: 0 0 calc(100% / var(--n)); }
-
-.dots { display: flex; justify-content: center; gap: 7px; margin-top: 18px; }
-.dot-btn {
-  width: 7px; height: 7px; padding: 0; border: 0; border-radius: 100px;
-  background: var(--line-2); cursor: pointer;
-  transition: width .3s cubic-bezier(.22,.7,.3,1), background .2s ease;
+/* ───────────── hero: the app, playing ─────────────
+   Four silent clips of the iPhone app at the pace of the Get started video, one after another,
+   each with its captions (main.js), the screen always whole. */
+.reel-screen { position: relative; aspect-ratio: 660 / 1434; }
+.reel-clip {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  display: block; object-fit: cover; background: #000;
+  opacity: 0; transition: opacity .35s ease;
 }
-.dot-btn:hover { background: rgba(255,255,255,.3); }
-.dot-btn.is-on { width: 22px; background: var(--accent); }
+.reel-clip.is-on { opacity: 1; }
+
+.reel-tabs {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px;
+  max-width: 320px; margin: 18px auto 0; padding: 4px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+}
+.reel-tab {
+  position: relative; overflow: hidden;
+  padding: 7px 4px; border: 0; border-radius: 9px; background: transparent;
+  color: var(--ink-3); font-family: var(--sans); font-size: .76rem; font-weight: 500;
+  cursor: pointer; transition: background .16s ease, color .16s ease;
+}
+.reel-tab:hover { color: var(--ink-2); background: rgba(255,255,255,.035); }
+.reel-tab.is-on { color: var(--accent); background: var(--accent-dim); }
+/* how far the clip has played */
+.reel-tab .bar {
+  position: absolute; left: 0; bottom: 0; height: 2px; width: 100%;
+  background: var(--accent); opacity: .9;
+  transform: scaleX(0); transform-origin: left;
+}
+
+/* one line at a time, in the same place, the room of two lines kept */
+.reel-captions {
+  position: relative; max-width: 320px; margin: 12px auto 0;
+  min-height: 2.8em; font-size: .86rem; line-height: 1.4; text-align: center;
+  color: var(--ink-2);
+}
+.reel-lines { display: none; margin: 0; padding: 0; list-style: none; }
+.reel-lines.is-on { display: block; }
+.reel-lines li {
+  position: absolute; inset: 0 0 auto 0;
+  opacity: 0; transform: translateY(4px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+.reel-lines li.is-on { opacity: 1; transform: none; }
 
 @media (max-width: 700px) {
-  .hero-shot .screen { border-radius: 19px; }
-  .dots { margin-top: 12px; }
+  .hero-shot .screen { border-radius: 21px; }
+  .reel-tabs { margin-top: 14px; max-width: 300px; }
+  .reel-tab { font-size: .72rem; padding: 6px 2px; }
+  .reel-captions { font-size: .82rem; max-width: 300px; }
 }
