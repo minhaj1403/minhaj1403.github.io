@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dex: A Coding Environment for Your Phone</title>
+<title>Dex: Coding in Your Pocket</title>
 
 <meta name="description" content="Dex is a coding environment for Android and iOS. Terminals, files, Git, GitHub pull requests and the coding agent of your choice, on your own computers over SSH.">
 <meta name="author" content="Minhajur Rahman Chowdhury Mahim">
 <meta name="theme-color" content="#07080a">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dex: A Coding Environment for Your Phone">
+<meta property="og:title" content="Dex: Coding in Your Pocket">
 <meta property="og:description" content="Terminals, files, Git, GitHub pull requests and the coding agent of your choice, on your own computers over SSH.">
 <meta property="og:image" content="assets/img/logo.webp">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="assets/img/icon.png">
-<link rel="apple-touch-icon" href="assets/img/icon.png">
+<link rel="icon" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,6 @@
       <span>Dex</span>
     </a>
     <nav class="nav-links" aria-label="Sections">
-      <a href="#features">What it does</a>
       <a href="#machines">Machines</a>
       <a href="#agents">Agents</a>
       <a href="#tablets">Tablets &amp; iPad</a>
@@ -65,7 +64,7 @@
   <div class="glow" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <h1 data-reveal style="--i:1">A coding environment<br>for your <span class="accent">phone</span>.</h1>
+      <h1 data-reveal style="--i:1">Coding in your <span class="accent">pocket</span>.</h1>
       <p class="lede" data-reveal style="--i:2">
         Terminals, files, Git, GitHub pull requests and the coding agent of your choice,
         on your own computers over SSH: your Mac, a Linux server, or a machine in the cloud.
@@ -86,121 +85,43 @@
 
     <div class="hero-shot" data-reveal style="--i:3">
       <div class="phone" id="heroPhone">
-        <div class="screen">
-          <div class="track track-n" id="heroTrack" style="--n:7">
-            <img src="assets/img/terminal.webp" alt="The Dex terminal on a phone, connected to a Mac over SSH." width="1080" height="2340" loading="eager">
-            <img src="assets/img/files.webp" alt="The file tree of a project on the Mac, with Git status." width="1080" height="2340" loading="eager">
-            <img src="assets/img/hero-history.webp" alt="Past agent conversations on the Mac." width="1080" height="2340" loading="eager">
-            <img src="assets/img/hero-new-chat.webp" alt="Starting a new chat: Claude Code or Codex." width="1080" height="2340" loading="eager">
-            <img src="assets/img/agent.webp" alt="A chat with Codex on the Mac." width="1080" height="2340" loading="eager">
-            <img src="assets/img/hero-history-codex.webp" alt="The new Codex chat at the top of the conversations." width="1080" height="2340" loading="eager">
-            <img src="assets/img/git.webp" alt="The Git tab, with changes and pull requests." width="1080" height="2340" loading="eager">
-          </div>
+        <div class="screen reel-screen" id="heroReel">
+          <video class="reel-clip is-on" src="assets/video/hero-terminal.mp4" poster="assets/img/hero-terminal.webp" width="660" height="1434" muted playsinline preload="auto" aria-label="A terminal on the Mac, opened from the phone."></video>
+          <video class="reel-clip" src="assets/video/hero-agent.mp4" poster="assets/img/hero-agent.webp" width="660" height="1434" muted playsinline preload="metadata" aria-label="Claude Code making a change on the Mac, from a new chat on the phone."></video>
+          <video class="reel-clip" src="assets/video/hero-files.mp4" poster="assets/img/hero-files.webp" width="660" height="1434" muted playsinline preload="metadata" aria-label="The project's files with their Git status, and one open in the editor."></video>
+          <video class="reel-clip" src="assets/video/hero-git.mp4" poster="assets/img/hero-git.webp" width="660" height="1434" muted playsinline preload="metadata" aria-label="The Git tab: what changed, and a file's diff."></video>
         </div>
       </div>
-      <div class="dots" id="heroDots" role="tablist" aria-label="Screens">
-        <button class="dot-btn is-on" role="tab" aria-selected="true" aria-label="Screen 1: The Dex terminal on a phone, connected to a Mac over SSH."></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 2: The file tree of a project on the Mac, with Git status."></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 3: Past agent conversations on the Mac."></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 4: Starting a new chat: Claude Code or Codex."></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 5: A chat with Codex on the Mac."></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 6: The new Codex chat at the top of the conversations."></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="Screen 7: The Git tab, with changes and pull requests."></button>
+      <div class="reel-tabs" id="heroTabs" role="tablist" aria-label="Screens">
+        <button class="reel-tab is-on" role="tab" aria-selected="true"><span>Terminal</span><i class="bar" aria-hidden="true"></i></button>
+        <button class="reel-tab" role="tab" aria-selected="false"><span>Agent</span><i class="bar" aria-hidden="true"></i></button>
+        <button class="reel-tab" role="tab" aria-selected="false"><span>Files</span><i class="bar" aria-hidden="true"></i></button>
+        <button class="reel-tab" role="tab" aria-selected="false"><span>Git</span><i class="bar" aria-hidden="true"></i></button>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ───────────────────────── showcase ───────────────────────── -->
-<section class="showcase" id="features">
-  <div class="wrap">
-    <div class="show-head" data-reveal>
-      <h2 class="section-title sm">Four tabs, one thumb</h2>
-      <p class="show-sub">Everything sits behind the bar at the bottom, where your thumb already is.</p>
-    </div>
-
-    <div class="show-grid" data-reveal style="--i:1">
-      <div class="phone phone-lg">
-        <div class="screen">
-          <div class="track" id="track">
-            <img src="assets/img/terminal.webp" alt="The Dex terminal tab." width="1080" height="2340" loading="eager">
-            <img src="assets/img/files.webp" alt="The Dex file tree, with Git status on each entry." width="1080" height="2340" loading="eager">
-            <img src="assets/img/agent.webp" alt="A chat with Codex on a Mac, inside Dex." width="1080" height="2340" loading="eager">
-            <img src="assets/img/git.webp" alt="The Git tab, with changes and pull requests." width="1080" height="2340" loading="eager">
-          </div>
-        </div>
+      <div class="reel-captions" id="heroCaptions">
+        <ol class="reel-lines is-on">
+          <li class="is-on" data-from="0.0" data-to="2.89">Open a terminal on your computer.</li>
+          <li data-from="2.89" data-to="5.279">Tap it to type. Extra keys add Esc, Ctrl, Tab and the arrows.</li>
+          <li data-from="5.279" data-to="7.566">Commands run there, not on the phone.</li>
+          <li data-from="7.566" data-to="8.913">It keeps running while you're away.</li>
+        </ol>
+        <ol class="reel-lines">
+          <li data-from="0.0" data-to="3.042">Every conversation on your computer, in one list.</li>
+          <li data-from="3.042" data-to="6.671">Start a chat with Claude Code or Codex. Dex installs one that's missing.</li>
+          <li data-from="6.671" data-to="12.878">Ask for something, like a Kelvin option.</li>
+          <li data-from="12.878" data-to="22.203">Claude Code works on your computer, live.</li>
+          <li data-from="22.203" data-to="29.176">Then it tells you what it changed.</li>
+        </ol>
+        <ol class="reel-lines">
+          <li data-from="0.0" data-to="2.29">Every file of the project, with its Git status.</li>
+          <li data-from="2.29" data-to="7.455">Open one to read or edit it.</li>
+          <li data-from="7.455" data-to="11.108">With syntax highlighting, undo and redo.</li>
+        </ol>
+        <ol class="reel-lines">
+          <li data-from="0.0" data-to="2.638">What changed, ready to stage, commit and push.</li>
+          <li data-from="2.638" data-to="5.244">Tap a file to see its diff.</li>
+        </ol>
       </div>
-
-      <div class="show-text">
-        <div id="panels">
-          <article class="panel is-on" data-panel="terminal">
-            <h3>Terminal</h3>
-            <ul>
-              <li>Several terminals per machine, switched from the strip above the tabs.</li>
-              <li>An extra keys toolbar above the keyboard, with <kbd>ESC</kbd>, <kbd>CTRL</kbd>, <kbd>ALT</kbd> and the arrow keys.</li>
-              <li>The keyboard opens only when you tap the terminal, so switching tabs doesn't pop it up.</li>
-              <li>Terminals keep running on the machine while you're away, and come back as you left them.</li>
-            </ul>
-          </article>
-
-          <article class="panel" data-panel="files">
-            <h3>Files</h3>
-            <ul>
-              <li>A tree of the workspace folder with Git status on every file and folder: changed, added, untracked.</li>
-              <li>Text opens in an editor with syntax highlighting, line numbers, wrapping, undo and redo.</li>
-              <li>Markdown preview, and viewers for images, video, audio and PDFs.</li>
-              <li>New, rename, copy, cut and paste, with undo. Upload and download on SSH hosts.</li>
-            </ul>
-          </article>
-
-          <article class="panel" data-panel="claude">
-            <h3>Coding agents</h3>
-            <ul>
-              <li>Chats with the coding agent of your choice, Claude Code or Codex, running on the machine the workspace is on.</li>
-              <li>Pick the model, the effort, and the permission mode, from asking before every edit to bypassing the prompts entirely.</li>
-              <li>Find text in a chat, and search past conversations.</li>
-              <li>Tap a file the agent mentions and it opens; go back and you're in the chat again.</li>
-              <li>A notification when the agent replies or asks permission while you're elsewhere.</li>
-            </ul>
-          </article>
-
-          <article class="panel" data-panel="git">
-            <h3>Git &amp; pull requests</h3>
-            <ul>
-              <li>The repository's changes, with a diff for each file. Stage, unstage, discard, commit, push, pull.</li>
-              <li>Switch and create branches.</li>
-              <li>GitHub pull requests for the workspace repo, with filters. Read one, review it, merge it, or open a new one.</li>
-              <li>Git runs on the machine the workspace is on, not on the phone.</li>
-            </ul>
-          </article>
-        </div>
-
-        <p class="hint">Cycling through the tabs. Tap one to take over.</p>
-      </div>
-    </div>
-
-    <!-- the app's own bottom bar, as the control -->
-    <div class="tabbar" data-reveal style="--i:2" role="tablist" aria-label="Feature tabs">
-      <button class="tab is-on" role="tab" aria-selected="true" data-tab="terminal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l6 6-6 6"/><path d="M13 18h7"/></svg>
-        <span>Terminal</span>
-        <i class="bar" aria-hidden="true"></i>
-      </button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="files">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-        <span>Files</span>
-        <i class="bar" aria-hidden="true"></i>
-      </button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="claude">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.9l7.3 4.2v8.4L12 19.7 4.7 15.5V7.1z"/><path d="M12 8.5l1.1 2.4 2.4 1.1-2.4 1.1L12 15.5l-1.1-2.4L8.5 12l2.4-1.1z"/></svg>
-        <span>Agent</span>
-        <i class="bar" aria-hidden="true"></i>
-      </button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="git">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="6" r="2.2"/><circle cx="7" cy="18" r="2.2"/><circle cx="17" cy="9" r="2.2"/><path d="M7 8.2v7.6M17 11.2c0 3-4 2.6-7 4"/></svg>
-        <span>Git</span>
-        <i class="bar" aria-hidden="true"></i>
-      </button>
     </div>
   </div>
 </section>
@@ -336,7 +257,7 @@
 <section class="start" id="start">
   <div class="wrap">
     <div class="video" data-reveal>
-      <iframe src="https://www.youtube-nocookie.com/embed/pSsPKhpLt_k?rel=0" title="Get started with Dex" loading="lazy"
+      <iframe src="https://www.youtube-nocookie.com/embed/g-SI3iaa-RQ?rel=0" title="Get started with Dex" loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>

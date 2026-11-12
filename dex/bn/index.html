@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dex: আপনার ফোনের জন্য কোডিং পরিবেশ</title>
+<title>Dex: আপনার পকেটে কোডিং</title>
 
 <meta name="description" content="Dex হলো অ্যান্ড্রয়েড আর iOS এর জন্য একটি কোডিং পরিবেশ। টার্মিনাল, ফাইল, Git, GitHub পুল রিকোয়েস্ট আর আপনার পছন্দের কোডিং এজেন্ট, SSH দিয়ে নিজের মেশিনে।">
 <meta name="author" content="Minhajur Rahman Chowdhury Mahim">
 <meta name="theme-color" content="#07080a">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Dex: আপনার ফোনের জন্য কোডিং পরিবেশ">
+<meta property="og:title" content="Dex: আপনার পকেটে কোডিং">
 <meta property="og:description" content="টার্মিনাল, ফাইল, Git, GitHub পুল রিকোয়েস্ট আর আপনার পছন্দের কোডিং এজেন্ট, SSH দিয়ে নিজের মেশিনে।">
 <meta property="og:image" content="../assets/img/logo.webp">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="icon" href="../assets/img/icon.png">
-<link rel="apple-touch-icon" href="../assets/img/icon.png">
+<link rel="icon" href="../assets/img/favicon.png">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +46,6 @@
       <span>Dex</span>
     </a>
     <nav class="nav-links" aria-label="অংশসমূহ">
-      <a href="#features">যা করে</a>
       <a href="#machines">মেশিন</a>
       <a href="#agents">এজেন্ট</a>
       <a href="#tablets">ট্যাবলেট ও iPad</a>
@@ -67,7 +66,7 @@
   <div class="glow" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy">
-      <h1 data-reveal style="--i:1">আপনার <span class="accent">ফোনের</span> জন্য<br>কোডিং পরিবেশ।</h1>
+      <h1 data-reveal style="--i:1">আপনার <span class="accent">পকেটে</span> কোডিং।</h1>
       <p class="lede" data-reveal style="--i:2">
         টার্মিনাল, ফাইল, Git, GitHub পুল রিকোয়েস্ট আর আপনার পছন্দের কোডিং এজেন্ট,
         SSH দিয়ে নিজের কম্পিউটারে: আপনার Mac, একটি লিনাক্স সার্ভার, বা ক্লাউডের একটি মেশিন।
@@ -88,121 +87,43 @@
 
     <div class="hero-shot" data-reveal style="--i:3">
       <div class="phone" id="heroPhone">
-        <div class="screen">
-          <div class="track track-n" id="heroTrack" style="--n:7">
-            <img src="../assets/img/terminal.webp" alt="SSH দিয়ে Mac এ যুক্ত ফোনের Dex টার্মিনাল।" width="1080" height="2340" loading="eager">
-            <img src="../assets/img/files.webp" alt="Mac এর একটি প্রজেক্টের ফাইল ট্রি, Git অবস্থা সহ।" width="1080" height="2340" loading="eager">
-            <img src="../assets/img/hero-history.webp" alt="Mac এ এজেন্টের সঙ্গে আগের আলাপগুলো।" width="1080" height="2340" loading="eager">
-            <img src="../assets/img/hero-new-chat.webp" alt="নতুন আলাপ শুরু: Claude Code বা Codex।" width="1080" height="2340" loading="eager">
-            <img src="../assets/img/agent.webp" alt="Mac এ Codex এর সঙ্গে একটি আলাপ।" width="1080" height="2340" loading="eager">
-            <img src="../assets/img/hero-history-codex.webp" alt="আলাপের তালিকার উপরে নতুন Codex আলাপ।" width="1080" height="2340" loading="eager">
-            <img src="../assets/img/git.webp" alt="Git ট্যাব, পরিবর্তন আর পুল রিকোয়েস্ট সহ।" width="1080" height="2340" loading="eager">
-          </div>
+        <div class="screen reel-screen" id="heroReel">
+          <video class="reel-clip is-on" src="../assets/video/hero-terminal.mp4" poster="../assets/img/hero-terminal.webp" width="660" height="1434" muted playsinline preload="auto" aria-label="ফোন থেকে খোলা Mac এর টার্মিনাল।"></video>
+          <video class="reel-clip" src="../assets/video/hero-agent.mp4" poster="../assets/img/hero-agent.webp" width="660" height="1434" muted playsinline preload="metadata" aria-label="ফোনের নতুন আলাপ থেকে Mac এ কোড বদলাচ্ছে Claude Code।"></video>
+          <video class="reel-clip" src="../assets/video/hero-files.mp4" poster="../assets/img/hero-files.webp" width="660" height="1434" muted playsinline preload="metadata" aria-label="Git স্ট্যাটাস সহ প্রজেক্টের ফাইল, আর এডিটরে খোলা একটি ফাইল।"></video>
+          <video class="reel-clip" src="../assets/video/hero-git.mp4" poster="../assets/img/hero-git.webp" width="660" height="1434" muted playsinline preload="metadata" aria-label="Git ট্যাব: কী বদলেছে, আর একটি ফাইলের diff।"></video>
         </div>
       </div>
-      <div class="dots" id="heroDots" role="tablist" aria-label="স্ক্রিন">
-        <button class="dot-btn is-on" role="tab" aria-selected="true" aria-label="স্ক্রিন ১: SSH দিয়ে Mac এ যুক্ত ফোনের Dex টার্মিনাল।"></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="স্ক্রিন ২: Mac এর একটি প্রজেক্টের ফাইল ট্রি, Git অবস্থা সহ।"></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="স্ক্রিন ৩: Mac এ এজেন্টের সঙ্গে আগের আলাপগুলো।"></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="স্ক্রিন ৪: নতুন আলাপ শুরু: Claude Code বা Codex।"></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="স্ক্রিন ৫: Mac এ Codex এর সঙ্গে একটি আলাপ।"></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="স্ক্রিন ৬: আলাপের তালিকার উপরে নতুন Codex আলাপ।"></button>
-        <button class="dot-btn" role="tab" aria-selected="false" aria-label="স্ক্রিন ৭: Git ট্যাব, পরিবর্তন আর পুল রিকোয়েস্ট সহ।"></button>
+      <div class="reel-tabs" id="heroTabs" role="tablist" aria-label="স্ক্রিন">
+        <button class="reel-tab is-on" role="tab" aria-selected="true"><span>টার্মিনাল</span><i class="bar" aria-hidden="true"></i></button>
+        <button class="reel-tab" role="tab" aria-selected="false"><span>এজেন্ট</span><i class="bar" aria-hidden="true"></i></button>
+        <button class="reel-tab" role="tab" aria-selected="false"><span>ফাইল</span><i class="bar" aria-hidden="true"></i></button>
+        <button class="reel-tab" role="tab" aria-selected="false"><span>Git</span><i class="bar" aria-hidden="true"></i></button>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ───────────────────────── showcase ───────────────────────── -->
-<section class="showcase" id="features">
-  <div class="wrap">
-    <div class="show-head" data-reveal>
-      <h2 class="section-title sm">চারটি ট্যাব, এক আঙুল</h2>
-      <p class="show-sub">সবকিছু নিচের বারের পেছনে, যেখানে আপনার আঙুল এমনিতেই থাকে।</p>
-    </div>
-
-    <div class="show-grid" data-reveal style="--i:1">
-      <div class="phone phone-lg">
-        <div class="screen">
-          <div class="track" id="track">
-            <img src="../assets/img/terminal.webp" alt="Dex এর টার্মিনাল ট্যাব।" width="1080" height="2340" loading="eager">
-            <img src="../assets/img/files.webp" alt="Dex এর ফাইল ট্রি, প্রতিটি এন্ট্রিতে Git অবস্থা সহ।" width="1080" height="2340" loading="eager">
-            <img src="../assets/img/agent.webp" alt="Dex এর ভেতরে Mac এ Codex এর সঙ্গে একটি আলাপ।" width="1080" height="2340" loading="eager">
-            <img src="../assets/img/git.webp" alt="Git ট্যাব, পরিবর্তন আর পুল রিকোয়েস্ট সহ।" width="1080" height="2340" loading="eager">
-          </div>
-        </div>
+      <div class="reel-captions" id="heroCaptions">
+        <ol class="reel-lines is-on">
+          <li class="is-on" data-from="0.0" data-to="2.89">আপনার কম্পিউটারে একটি টার্মিনাল খুলুন।</li>
+          <li data-from="2.89" data-to="5.279">লিখতে ট্যাপ করুন। বাড়তি কী-তে আছে Esc, Ctrl, Tab আর তীর চিহ্ন।</li>
+          <li data-from="5.279" data-to="7.566">কমান্ড চলে কম্পিউটারে, ফোনে নয়।</li>
+          <li data-from="7.566" data-to="8.913">আপনি না থাকলেও এটি চলতে থাকে।</li>
+        </ol>
+        <ol class="reel-lines">
+          <li data-from="0.0" data-to="3.042">কম্পিউটারের সব আলাপ, এক তালিকায়।</li>
+          <li data-from="3.042" data-to="6.671">Claude Code বা Codex এর সঙ্গে আলাপ শুরু করুন। যেটি নেই, Dex সেটি ইনস্টল করে দেয়।</li>
+          <li data-from="6.671" data-to="12.878">কিছু একটা চান, যেমন কেলভিনের একটি অপশন।</li>
+          <li data-from="12.878" data-to="22.203">Claude Code আপনার কম্পিউটারে কাজ করে, সরাসরি।</li>
+          <li data-from="22.203" data-to="29.176">তারপর জানায় কী কী বদলাল।</li>
+        </ol>
+        <ol class="reel-lines">
+          <li data-from="0.0" data-to="2.29">প্রজেক্টের প্রতিটি ফাইল, সঙ্গে Git স্ট্যাটাস।</li>
+          <li data-from="2.29" data-to="7.455">একটি খুলে পড়ুন বা এডিট করুন।</li>
+          <li data-from="7.455" data-to="11.108">সিনট্যাক্স হাইলাইটিং, আনডু আর রিডু সহ।</li>
+        </ol>
+        <ol class="reel-lines">
+          <li data-from="0.0" data-to="2.638">কী বদলেছে, স্টেজ, কমিট আর পুশের জন্য তৈরি।</li>
+          <li data-from="2.638" data-to="5.244">কোনো ফাইলে ট্যাপ করলে তার diff দেখা যায়।</li>
+        </ol>
       </div>
-
-      <div class="show-text">
-        <div id="panels">
-          <article class="panel is-on" data-panel="terminal">
-            <h3>টার্মিনাল</h3>
-            <ul>
-              <li>প্রতি মেশিনে একাধিক টার্মিনাল, ট্যাবের উপরের সারি থেকে বদলানো যায়।</li>
-              <li>কিবোর্ডের উপরে বাড়তি কি এর সারি, <kbd>ESC</kbd>, <kbd>CTRL</kbd>, <kbd>ALT</kbd> আর তীর চিহ্ন সহ।</li>
-              <li>টার্মিনালে চাপ দিলে তবেই কিবোর্ড ওঠে, তাই ট্যাব বদলালে সেটি লাফিয়ে ওঠে না।</li>
-              <li>আপনি দূরে থাকলেও টার্মিনাল মেশিনে চলতে থাকে, আর ফিরে এলে যেমন রেখে গিয়েছিলেন তেমনই পান।</li>
-            </ul>
-          </article>
-
-          <article class="panel" data-panel="files">
-            <h3>ফাইল</h3>
-            <ul>
-              <li>ওয়ার্কস্পেস ফোল্ডারের ট্রি, প্রতিটি ফাইল ও ফোল্ডারে Git অবস্থা সহ: পরিবর্তিত, যোগ করা, ট্র্যাক না করা।</li>
-              <li>টেক্সট খোলে এমন একটি এডিটরে, যাতে সিনট্যাক্স হাইলাইট, লাইন নম্বর, র‍্যাপিং, আনডু আর রিডু আছে।</li>
-              <li>মার্কডাউন প্রিভিউ, আর ছবি, ভিডিও, অডিও ও PDF দেখার ভিউয়ার।</li>
-              <li>নতুন, নাম বদল, কপি, কাট আর পেস্ট, আনডু সহ। SSH হোস্টে আপলোড আর ডাউনলোড।</li>
-            </ul>
-          </article>
-
-          <article class="panel" data-panel="claude">
-            <h3>কোডিং এজেন্ট</h3>
-            <ul>
-              <li>আপনার পছন্দের কোডিং এজেন্টের সঙ্গে আলাপ, Claude Code বা Codex, ওয়ার্কস্পেস যে মেশিনে সেখানেই চলে।</li>
-              <li>মডেল, এফোর্ট আর অনুমতির ধরন বেছে নিন, প্রতিবার সম্পাদনার আগে জিজ্ঞেস করা থেকে শুরু করে একেবারেই না জিজ্ঞেস করা পর্যন্ত।</li>
-              <li>কথোপকথনের ভেতরে লেখা খুঁজুন, আর আগের আলাপগুলোতে সার্চ করুন।</li>
-              <li>এজেন্ট যে ফাইলের কথা বলে তাতে চাপ দিলে সেটি খোলে, ফিরে গেলে আবার আলাপেই।</li>
-              <li>আপনি অন্য কোথাও থাকলে এজেন্ট উত্তর দিলে বা অনুমতি চাইলে নোটিফিকেশন আসে।</li>
-            </ul>
-          </article>
-
-          <article class="panel" data-panel="git">
-            <h3>Git ও পুল রিকোয়েস্ট</h3>
-            <ul>
-              <li>রিপোজিটরির পরিবর্তন, প্রতিটি ফাইলের ডিফ সহ। স্টেজ, আনস্টেজ, বাতিল, কমিট, পুশ, পুল।</li>
-              <li>ব্রাঞ্চ বদলান আর নতুন ব্রাঞ্চ বানান।</li>
-              <li>ওয়ার্কস্পেসের রিপোর GitHub পুল রিকোয়েস্ট, ফিল্টার সহ। পড়ুন, রিভিউ করুন, মার্জ করুন, বা নতুন একটি খুলুন।</li>
-              <li>Git চলে ওয়ার্কস্পেস যে মেশিনে সেখানে, ফোনে নয়।</li>
-            </ul>
-          </article>
-        </div>
-
-        <p class="hint">ট্যাবগুলো ঘুরে ঘুরে দেখাচ্ছে। একটিতে চাপ দিলে থেমে যাবে।</p>
-      </div>
-    </div>
-
-    <!-- the app's own bottom bar, as the control -->
-    <div class="tabbar" data-reveal style="--i:2" role="tablist" aria-label="ফিচার ট্যাব">
-      <button class="tab is-on" role="tab" aria-selected="true" data-tab="terminal">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6l6 6-6 6"/><path d="M13 18h7"/></svg>
-        <span>টার্মিনাল</span>
-        <i class="bar" aria-hidden="true"></i>
-      </button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="files">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-        <span>ফাইল</span>
-        <i class="bar" aria-hidden="true"></i>
-      </button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="claude">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.9l7.3 4.2v8.4L12 19.7 4.7 15.5V7.1z"/><path d="M12 8.5l1.1 2.4 2.4 1.1-2.4 1.1L12 15.5l-1.1-2.4L8.5 12l2.4-1.1z"/></svg>
-        <span>এজেন্ট</span>
-        <i class="bar" aria-hidden="true"></i>
-      </button>
-      <button class="tab" role="tab" aria-selected="false" data-tab="git">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7" cy="6" r="2.2"/><circle cx="7" cy="18" r="2.2"/><circle cx="17" cy="9" r="2.2"/><path d="M7 8.2v7.6M17 11.2c0 3-4 2.6-7 4"/></svg>
-        <span>Git</span>
-        <i class="bar" aria-hidden="true"></i>
-      </button>
     </div>
   </div>
 </section>
@@ -336,7 +257,7 @@
 <section class="start" id="start">
   <div class="wrap">
     <div class="video" data-reveal>
-      <iframe src="https://www.youtube-nocookie.com/embed/pSsPKhpLt_k?rel=0" title="Dex দিয়ে শুরু করুন" loading="lazy"
+      <iframe src="https://www.youtube-nocookie.com/embed/g-SI3iaa-RQ?rel=0" title="Dex দিয়ে শুরু করুন" loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
