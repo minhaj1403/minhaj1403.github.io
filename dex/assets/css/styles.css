@@ -168,7 +168,7 @@ h1 {
 }
 .btn-primary:hover { background: #4fb6f8; border-color: #4fb6f8; }
 
-/* Apple's own badge artwork, shown as it is (no recolouring, no extra frame) */
+/* Apple's and Google's own badge artwork, shown as it is (no recolouring, no extra frame) */
 .store-badge {
   display: inline-flex; align-items: center; flex: none;
   border-radius: 8px; transition: transform .16s ease, opacity .16s ease;
@@ -176,13 +176,6 @@ h1 {
 .store-badge img { display: block; height: 48px; width: auto; }
 .store-badge:hover { transform: translateY(-1px); opacity: .92; }
 .stores { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
-/* where the Google Play badge will be: plain words, not a button */
-.soon {
-  display: inline-flex; align-items: center; gap: 9px; height: 48px; padding: 0 16px;
-  border: 1px dashed var(--line-2); border-radius: 10px;
-  color: var(--ink-3); font-size: .88rem; font-weight: 500;
-}
-.soon-logo { width: 18px; height: 18px; fill: #3ddc84; flex: none; opacity: .85; }
 
 /* ───────────── phone frame ───────────── */
 .phone {
