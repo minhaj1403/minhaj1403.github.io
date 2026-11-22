@@ -34,7 +34,7 @@ I worked on VLM reasoning capabilities at the [Machine Learning & Vision Lab (ML
 
 <!-- I also interned at UNIUNI Corp., contributing to AI development and communications, achieving a **CES 2025 Innovation Award** for our anomaly detection system in privacy-sensitive places. -->
 
-On the side I'm building **[Dex](https://minhaj1403.github.io/dex/)**, a coding environment for phones: terminals, files, Git and coding agents on Android and iOS, working on your own machines over SSH.
+On the side I'm building **[Dex](https://dexide.dev/)**, a coding environment for phones: terminals, files, Git and coding agents on Android and iOS, working on your own machines over SSH.
 
 Outside work, I enjoy playing guitar and cycling!
 
