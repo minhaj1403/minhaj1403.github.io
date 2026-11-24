@@ -140,7 +140,7 @@ newsletter:
 
 collections:
   books:
-    output: true
+    output: false # only the al-folio sample book is in _books; set to true to publish book reviews
   news:
     defaults:
       layout: post
@@ -166,7 +166,8 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+# trailing slashes matter: Jekyll matches include entries as prefixes, so "_pages" would also publish _pages_not_needed/
+include: ["_pages/", "_scripts/"]
 exclude:
   - bin/
   - CONTRIBUTING.md
@@ -250,7 +251,7 @@ jekyll-archives:
       tags: "/blog/:type/:name/"
       categories: "/blog/:type/:name/"
   books:
-    enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
+    enabled: [] # set to [year, tags, categories] if you publish the books collection again
 
 display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
