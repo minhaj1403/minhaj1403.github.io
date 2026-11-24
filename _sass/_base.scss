@@ -941,7 +941,7 @@ footer.sticky-bottom {
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
 
       .preview {
       }
@@ -974,7 +974,26 @@ footer.sticky-bottom {
         font-weight: bolder;
       }
 
+      .periodical {
+        font-size: 0.85rem;
+        color: var(--global-text-color-light);
+
+        em {
+          font-style: normal;
+          font-weight: 500;
+          color: color-mix(in srgb, var(--global-text-color) 72%, var(--global-bg-color));
+        }
+
+        .sep {
+          margin: 0 0.4rem;
+        }
+      }
+
       .author {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: var(--global-text-color);
+        margin: 0.2rem 0 0.35rem;
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
