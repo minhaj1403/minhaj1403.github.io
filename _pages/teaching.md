@@ -9,6 +9,13 @@ nav_order: 6
 
 <div class="teaching">
 
-{% bibliography --file teaching --template teaching_bib --group_by none --sort_by year --order descending %}
+<h2 class="teaching-group">Instructor</h2>
+{% bibliography --file teaching --template teaching_bib --group_by none --query @course[role~=Instructor] %}
+
+<h2 class="teaching-group">Teaching Assistant</h2>
+{% bibliography --file teaching --template teaching_bib --group_by none --query @course[role~=Assistant] %}
+
+<h2 class="teaching-group">Mentoring</h2>
+{% bibliography --file teaching --template teaching_bib --group_by none --query @mentoring %}
 
 </div>

@@ -1107,62 +1107,92 @@ footer.sticky-bottom {
 // Teaching (add this section after the Publications section)
 
 .teaching {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 
-  h1 {
-    color: var(--global-theme-color);
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
+  h2.teaching-group {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    margin: 2.25rem 0 0.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--global-divider-color);
 
-  h2 {
-    margin-bottom: 1rem;
-
-    span {
-      font-size: 1.5rem;
+    &:first-child {
+      margin-top: 0.5rem;
     }
-  }
-
-  h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    text-align: right;
   }
 
   ol.bibliography {
     list-style: none;
     padding: 0;
-    margin-top: 0;
+    margin: 0;
 
-    li {
-      margin-bottom: 2rem;  /* More spacing between entries */
-      padding-bottom: 1.5rem;
+    > li {
+      padding: 0.85rem 0;
       border-bottom: 1px solid var(--global-divider-color);
 
       &:last-child {
         border-bottom: none;
       }
+    }
+  }
 
-      .title {
-        font-weight: bolder;
-        font-size: 1.3em;  /* Bigger font for title */
-        margin-bottom: 0.75rem;
-      }
+  .course {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 1.5rem;
+    row-gap: 0.2rem;
+    align-items: baseline;
+  }
 
-      .author {
-        margin-bottom: 0.75rem;
-        line-height: 1.5;
-      }
+  .course-main {
+    min-width: 0;
+  }
 
-      .periodical {
-        font-size: 0.9em;
-        margin-bottom: 0.5rem;
-        color: var(--global-text-color-light);
-      }
+  .course-code {
+    display: inline-block;
+    font-family: SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+    color: var(--global-text-color-light);
+    background: color-mix(in srgb, var(--global-text-color) 5%, var(--global-bg-color));
+    border-radius: 4px;
+    padding: 0.1rem 0.4rem;
+    margin-right: 0.5rem;
+    vertical-align: 0.1em;
+  }
+
+  .course-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--global-text-color);
+  }
+
+  .course-term {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .course-meta {
+    grid-column: 1 / -1;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+
+    .sep {
+      margin: 0 0.4rem;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .course {
+      grid-template-columns: 1fr;
+    }
+
+    .course-term {
+      white-space: normal;
     }
   }
 }
