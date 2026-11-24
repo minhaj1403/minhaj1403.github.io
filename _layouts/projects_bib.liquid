@@ -1,63 +1,54 @@
 ---
 ---
-<div class="row">
-  {% if site.enable_project_thumbnails %}
-    <div class="col col-sm-2 abbr">
-      {% if entry.preview %}
-        {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
-        {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/project_preview/' %}
-          {%
-            include figure.liquid
-            loading="eager"
-            path=entry_path
-            sizes = "200px"
-            class="preview z-depth-1 rounded"
-            zoomable=true
-            avoid_scaling=true
-            alt=entry.preview
-          %}
-        {% endif %}
+<article id="{{ entry.key }}" class="project-item">
+  {% if site.enable_project_thumbnails and entry.preview %}
+    <div class="project-thumb">
+      {% if entry.preview contains '://' %}
+        <img src="{{ entry.preview }}" alt="{{ entry.title }}" loading="lazy">
+      {% else %}
+        {% assign entry_path = entry.preview | prepend: '/assets/img/project_preview/' %}
+        {%
+          include figure.liquid
+          loading="lazy"
+          path=entry_path
+          sizes="(min-width: 576px) 220px, 100vw"
+          zoomable=true
+          avoid_scaling=true
+          alt=entry.title
+        %}
       {% endif %}
     </div>
   {% endif %}
 
-  <div id="{{ entry.key }}" class="{% if site.enable_project_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
-    <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
-    
-    <!-- Description -->
-    <div class="author">
-      {{ entry.description }}
+  <div class="project-body">
+    <div class="project-head">
+      <h3 class="project-title">{{ entry.title }}</h3>
+      {% if entry.duration %}<span class="project-date">{{ entry.duration }}</span>{% endif %}
     </div>
 
-    <!-- Keywords/Hashtags -->
+    <p class="project-desc">{{ entry.description }}</p>
+
     {% if entry.keywords %}
-      <div class="keywords">
-        {% assign keywords_array = entry.keywords | split: ", " %}
+      <ul class="project-tags">
+        {% assign keywords_array = entry.keywords | split: "," %}
         {% for keyword in keywords_array %}
-          <span class="keyword-tag">#{{ keyword | strip }}</span>
+          <li>{{ keyword | strip }}</li>
         {% endfor %}
-      </div>
+      </ul>
     {% endif %}
 
-    <!-- Duration -->
-    <div class="periodical">
-      {{ entry.duration }}
-    </div>
-
-    <!-- Links with blue bordered buttons -->
-    <div class="links">
-      {% if entry.website != blank %}
-        <a href="{{ entry.website }}" class="btn btn-sm btn-outline-primary z-depth-0" role="button" target="_blank">Website &rarr;</a>
-      {% endif %}
-      {% if entry.code != blank %}
-        <a href="{{ entry.code }}" class="btn btn-sm btn-outline-primary z-depth-0" role="button" target="_blank">Code</a>
-      {% endif %}
-      {% if entry.report != blank %}
-        <a href="{{ entry.report }}" class="btn btn-sm btn-outline-primary z-depth-0" role="button" target="_blank">Report</a>
-      {% endif %}
-    </div>
+    {% if entry.website != blank or entry.code != blank or entry.report != blank %}
+      <div class="project-links">
+        {% if entry.website != blank %}
+          <a href="{{ entry.website }}" class="project-link" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> Website</a>
+        {% endif %}
+        {% if entry.code != blank %}
+          <a href="{{ entry.code }}" class="project-link" target="_blank" rel="noopener"><i class="fa-solid fa-code"></i> Code</a>
+        {% endif %}
+        {% if entry.report != blank %}
+          <a href="{{ entry.report }}" class="project-link" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> Report</a>
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
-</div>
+</article>
